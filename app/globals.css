@@ -10,7 +10,7 @@
   
   body {
     @apply bg-black text-white font-sans;
-    background: linear-gradient(135deg, #000000 0%, #111827 50%, #030712 100%);
+    background: linear-gradient(135deg, #000000 0%, #0f172a 50%, #1e293b 100%);
     min-height: 100vh;
   }
 
@@ -25,7 +25,7 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-400 via-accent-500 to-primary-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-white via-accent-400 to-white bg-clip-text text-transparent;
     background-size: 200% 200%;
     animation: gradientShift 3s ease-in-out infinite;
   }
@@ -39,17 +39,25 @@
 
   .glow-effect {
     box-shadow: 
-      0 0 20px rgba(99, 102, 241, 0.4),
-      0 0 40px rgba(99, 102, 241, 0.2),
-      0 0 80px rgba(99, 102, 241, 0.1);
+      0 0 20px rgba(99, 102, 241, 0.3),
+      0 0 40px rgba(99, 102, 241, 0.15);
   }
 
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-500 hover:to-primary-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+    @apply bg-gradient-to-r from-accent-600 to-accent-700 hover:from-accent-500 hover:to-accent-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .btn-secondary {
-    @apply glass-effect hover:bg-white/10 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 border border-primary-500/30 hover:border-primary-400/50;
+    @apply glass-effect hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 border border-accent-500/30 hover:border-accent-400/50;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .card-hover {
@@ -59,8 +67,8 @@
 
   .card-hover:hover {
     box-shadow: 
-      0 25px 50px -12px rgba(99, 102, 241, 0.25),
-      0 0 0 1px rgba(99, 102, 241, 0.1),
+      0 25px 50px -12px rgba(99, 102, 241, 0.2),
+      0 0 0 1px rgba(255, 255, 255, 0.1),
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 

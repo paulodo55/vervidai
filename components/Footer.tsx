@@ -37,11 +37,10 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-display font-semibold text-white">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">AI Consulting</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Machine Learning</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Web Development</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">iOS App Development</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Digital Strategy</a></li>
+              <li><Link href="/services/ai-consulting" className="text-gray-400 hover:text-white transition-colors duration-300">AI Consulting</Link></li>
+              <li><Link href="/services/web-development" className="text-gray-400 hover:text-white transition-colors duration-300">Web Development</Link></li>
+              <li><Link href="/services/ios-development" className="text-gray-400 hover:text-white transition-colors duration-300">iOS App Development</Link></li>
+              <li><Link href="/services/digital-strategy" className="text-gray-400 hover:text-white transition-colors duration-300">Digital Strategy</Link></li>
             </ul>
           </div>
 
@@ -62,16 +61,16 @@ export default function Footer() {
             <h3 className="text-lg font-display font-semibold text-white">Get in Touch</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-primary-400" />
+                <Mail className="h-5 w-5 text-accent-400" />
                 <span className="text-gray-400">hello@vervid.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-primary-400" />
+                <Phone className="h-5 w-5 text-accent-400" />
                 <span className="text-gray-400">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-primary-400" />
-                <span className="text-gray-400">San Francisco, CA</span>
+                <MapPin className="h-5 w-5 text-accent-400" />
+                <span className="text-gray-400">Austin, TX</span>
               </div>
             </div>
           </div>

@@ -31,8 +31,8 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="relative">
-              <Zap className="h-8 w-8 text-primary-400 transform group-hover:scale-110 transition-transform duration-300" />
-              <div className="absolute inset-0 bg-primary-400 blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <Zap className="h-8 w-8 text-accent-400 transform group-hover:scale-110 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-accent-400 blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
             <span className="text-2xl font-display font-bold gradient-text">
               Vervid
@@ -48,7 +48,7 @@ export default function Navbar() {
                 className="text-gray-300 hover:text-white font-medium transition-colors duration-300 relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-400 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-400 to-accent-500 group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
             <Link
@@ -62,7 +62,7 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white hover:text-primary-400 transition-colors duration-300"
+            className="md:hidden text-white hover:text-accent-400 transition-colors duration-300"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
