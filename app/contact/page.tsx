@@ -126,14 +126,14 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-accent-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-8">
-              <Sparkles className="h-4 w-4 text-primary-400 mr-2" />
+              <Sparkles className="h-4 w-4 text-accent-400 mr-2" />
               <span className="text-sm font-medium">Let's Connect</span>
             </div>
             
@@ -309,14 +309,14 @@ export default function Contact() {
                 {contactInfo.map((info, index) => (
                   <div key={index} className="glass-effect p-6 rounded-2xl card-hover">
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-accent-500 to-accent-600 flex items-center justify-center flex-shrink-0">
                         <info.icon className="h-6 w-6 text-white" />
                       </div>
                       <div>
                         <h3 className="text-lg font-display font-bold text-white mb-1">
                           {info.title}
                         </h3>
-                        <p className="text-primary-400 font-semibold mb-1">
+                        <p className="text-accent-400 font-semibold mb-1">
                           {info.content}
                         </p>
                         <p className="text-gray-400 text-sm">
@@ -336,7 +336,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {services.map((service, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary-400 rounded-full flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-accent-400 rounded-full flex-shrink-0"></div>
                       <span className="text-gray-300">{service}</span>
                     </div>
                   ))}
@@ -351,25 +351,25 @@ export default function Contact() {
                 <div className="flex space-x-4">
                   <a 
                     href="#" 
-                    className="w-12 h-12 rounded-xl glass-effect hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-primary-400 transition-all duration-300 hover:scale-110"
+                    className="w-12 h-12 rounded-xl glass-effect hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-accent-400 transition-all duration-300 hover:scale-110"
                   >
                     <Linkedin className="h-6 w-6" />
                   </a>
                   <a 
                     href="#" 
-                    className="w-12 h-12 rounded-xl glass-effect hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-primary-400 transition-all duration-300 hover:scale-110"
+                    className="w-12 h-12 rounded-xl glass-effect hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-accent-400 transition-all duration-300 hover:scale-110"
                   >
                     <Twitter className="h-6 w-6" />
                   </a>
                   <a 
                     href="#" 
-                    className="w-12 h-12 rounded-xl glass-effect hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-primary-400 transition-all duration-300 hover:scale-110"
+                    className="w-12 h-12 rounded-xl glass-effect hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-accent-400 transition-all duration-300 hover:scale-110"
                   >
                     <Github className="h-6 w-6" />
                   </a>
                   <a 
                     href="#" 
-                    className="w-12 h-12 rounded-xl glass-effect hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-primary-400 transition-all duration-300 hover:scale-110"
+                    className="w-12 h-12 rounded-xl glass-effect hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-accent-400 transition-all duration-300 hover:scale-110"
                   >
                     <MessageSquare className="h-6 w-6" />
                   </a>

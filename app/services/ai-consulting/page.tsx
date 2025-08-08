@@ -9,8 +9,6 @@ import {
   Zap,
   Target,
   CheckCircle,
-  Sparkles,
-  Users,
   DollarSign,
   Clock
 } from 'lucide-react'

@@ -9,8 +9,6 @@ import {
   Zap,
   Brain,
   CheckCircle,
-  Sparkles,
-  Users,
   BarChart3,
   Lightbulb
 } from 'lucide-react'

@@ -24,14 +24,14 @@ export default function Careers() {
       {/* Hero Section */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-accent-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
         <div className="container-custom relative z-10">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-8">
-              <Sparkles className="h-4 w-4 text-primary-400 mr-2" />
+              <Sparkles className="h-4 w-4 text-accent-400 mr-2" />
               <span className="text-sm font-medium">Join Our Mission</span>
             </div>
             
@@ -48,13 +48,13 @@ export default function Careers() {
 
             {/* Enhanced Visual Elements */}
             <div className="flex justify-center items-center space-x-8 mb-16">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 morphing-bg glow-pulse flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-accent-500 to-accent-500 morphing-bg glow-pulse flex items-center justify-center">
                 <Users className="h-8 w-8 text-white" />
               </div>
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-accent-500 to-primary-500 morphing-bg glow-pulse flex items-center justify-center" style={{ animationDelay: '1s' }}>
                 <Heart className="h-6 w-6 text-white" />
               </div>
-              <div className="w-20 h-20 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 morphing-bg glow-pulse flex items-center justify-center" style={{ animationDelay: '2s' }}>
+              <div className="w-20 h-20 rounded-full bg-gradient-to-r from-accent-600 to-accent-600 morphing-bg glow-pulse flex items-center justify-center" style={{ animationDelay: '2s' }}>
                 <Rocket className="h-10 w-10 text-white" />
               </div>
             </div>
@@ -67,7 +67,7 @@ export default function Careers() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="glass-effect p-12 rounded-3xl text-center">
-              <Zap className="h-16 w-16 text-primary-400 mx-auto mb-8" />
+              <Zap className="h-16 w-16 text-accent-400 mx-auto mb-8" />
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">
                 Growing <span className="gradient-text">Fast</span>
               </h2>
@@ -79,7 +79,7 @@ export default function Careers() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="glass-effect p-6 rounded-2xl text-left">
-                  <Target className="h-8 w-8 text-primary-400 mb-4" />
+                  <Target className="h-8 w-8 text-accent-400 mb-4" />
                   <h3 className="text-xl font-display font-bold mb-3 text-white">Future Opportunities</h3>
                   <div className="space-y-2 text-gray-300 text-sm">
                     <div>• AI/ML Engineers</div>
@@ -102,7 +102,7 @@ export default function Careers() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-primary-500/10 to-accent-500/10 rounded-2xl p-8 mb-8">
+              <div className="bg-gradient-to-r from-accent-500/10 to-accent-500/10 rounded-2xl p-8 mb-8">
                 <h3 className="text-2xl font-display font-bold mb-4 text-white">
                   Why Join <span className="gradient-text">Vervid</span>?
                 </h3>
@@ -156,7 +156,7 @@ export default function Careers() {
               { title: 'Impact', desc: 'Create meaningful change for our clients' }
             ].map((value, index) => (
               <div key={index} className="glass-effect p-6 rounded-2xl card-hover text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-accent-500 to-accent-500 flex items-center justify-center">
                   <span className="text-2xl font-bold text-white">{value.title[0]}</span>
                 </div>
                 <h3 className="text-xl font-display font-bold mb-3 text-white">{value.title}</h3>
@@ -169,7 +169,7 @@ export default function Careers() {
 
       {/* CTA Section */}
       <section className="section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-accent-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-600/20 to-accent-600/20"></div>
         <div className="container-custom relative z-10">
           <div className="text-center">
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">

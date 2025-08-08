@@ -82,8 +82,10 @@ vervid/
 ## 🎯 Pages
 
 - **Homepage** - Hero section, services overview, and compelling CTAs
-- **About** - Paul O'Donnell's story and company values
+- **About** - Paul O'Donnell's story and company values  
 - **Contact** - Modern contact form and business information
+- **Service Pages** - Dedicated pages for AI Consulting, Web Development, iOS Development, and Digital Strategy
+- **Legal Pages** - Privacy Policy, Terms of Service, Case Studies, Blog, and Careers
 
 ## 🌟 Key Components
 
@@ -116,6 +118,7 @@ This project is private and proprietary to Vervid.
 
 For questions about this website or Vervid's services:
 - Email: hello@vervid.com
+- Location: Austin, TX
 - Website: [vervid.com](https://vervid.com)
 
 ---

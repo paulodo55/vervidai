@@ -15,14 +15,14 @@ export default function Privacy() {
       {/* Hero Section */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-accent-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
         <div className="container-custom relative z-10">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-8">
-              <Shield className="h-4 w-4 text-primary-400 mr-2" />
+              <Shield className="h-4 w-4 text-accent-400 mr-2" />
               <span className="text-sm font-medium">Your Privacy Matters</span>
             </div>
             
@@ -52,7 +52,7 @@ export default function Privacy() {
               {/* Information We Collect */}
               <div className="glass-effect p-8 rounded-2xl">
                 <div className="flex items-center mb-6">
-                  <Eye className="h-8 w-8 text-primary-400 mr-4" />
+                  <Eye className="h-8 w-8 text-accent-400 mr-4" />
                   <h2 className="text-3xl font-display font-bold text-white">Information We Collect</h2>
                 </div>
                 <div className="space-y-4 text-gray-300">
@@ -83,7 +83,7 @@ export default function Privacy() {
               {/* Information Protection */}
               <div className="glass-effect p-8 rounded-2xl">
                 <div className="flex items-center mb-6">
-                  <Lock className="h-8 w-8 text-primary-400 mr-4" />
+                  <Lock className="h-8 w-8 text-accent-400 mr-4" />
                   <h2 className="text-3xl font-display font-bold text-white">How We Protect Your Information</h2>
                 </div>
                 <div className="space-y-4 text-gray-300">
@@ -118,7 +118,7 @@ export default function Privacy() {
               {/* Your Rights */}
               <div className="glass-effect p-8 rounded-2xl">
                 <div className="flex items-center mb-6">
-                  <Users className="h-8 w-8 text-primary-400 mr-4" />
+                  <Users className="h-8 w-8 text-accent-400 mr-4" />
                   <h2 className="text-3xl font-display font-bold text-white">Your Rights</h2>
                 </div>
                 <div className="space-y-4 text-gray-300">
@@ -130,7 +130,7 @@ export default function Privacy() {
                     <li>• Opt-out of marketing communications</li>
                     <li>• Object to the processing of your information</li>
                   </ul>
-                  <p className="mt-4">To exercise these rights, please contact us at <a href="mailto:hello@vervid.com" className="text-primary-400 hover:text-primary-300">hello@vervid.com</a>.</p>
+                  <p className="mt-4">To exercise these rights, please contact us at <a href="mailto:hello@vervid.com" className="text-accent-400 hover:text-accent-300">hello@vervid.com</a>.</p>
                 </div>
               </div>
 
@@ -155,14 +155,14 @@ export default function Privacy() {
               {/* Contact */}
               <div className="glass-effect p-8 rounded-2xl">
                 <div className="flex items-center mb-6">
-                  <Mail className="h-8 w-8 text-primary-400 mr-4" />
+                  <Mail className="h-8 w-8 text-accent-400 mr-4" />
                   <h2 className="text-3xl font-display font-bold text-white">Contact Us</h2>
                 </div>
                 <div className="space-y-4 text-gray-300">
                   <p>If you have any questions about this Privacy Policy, please contact us:</p>
                   <div className="space-y-2 ml-4">
-                    <p>Email: <a href="mailto:hello@vervid.com" className="text-primary-400 hover:text-primary-300">hello@vervid.com</a></p>
-                    <p>Website: <a href="https://vervid.com" className="text-primary-400 hover:text-primary-300">vervid.com</a></p>
+                    <p>Email: <a href="mailto:hello@vervid.com" className="text-accent-400 hover:text-accent-300">hello@vervid.com</a></p>
+                    <p>Website: <a href="https://vervid.com" className="text-accent-400 hover:text-accent-300">vervid.com</a></p>
                   </div>
                 </div>
               </div>

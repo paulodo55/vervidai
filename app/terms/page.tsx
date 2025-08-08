@@ -15,14 +15,14 @@ export default function Terms() {
       {/* Hero Section */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-accent-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
         <div className="container-custom relative z-10">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-8">
-              <FileText className="h-4 w-4 text-primary-400 mr-2" />
+              <FileText className="h-4 w-4 text-accent-400 mr-2" />
               <span className="text-sm font-medium">Legal Terms</span>
             </div>
             
@@ -52,7 +52,7 @@ export default function Terms() {
               {/* Agreement */}
               <div className="glass-effect p-8 rounded-2xl">
                 <div className="flex items-center mb-6">
-                  <Scale className="h-8 w-8 text-primary-400 mr-4" />
+                  <Scale className="h-8 w-8 text-accent-400 mr-4" />
                   <h2 className="text-3xl font-display font-bold text-white">Agreement to Terms</h2>
                 </div>
                 <div className="space-y-4 text-gray-300">
@@ -83,7 +83,7 @@ export default function Terms() {
               {/* User Responsibilities */}
               <div className="glass-effect p-8 rounded-2xl">
                 <div className="flex items-center mb-6">
-                  <Shield className="h-8 w-8 text-primary-400 mr-4" />
+                  <Shield className="h-8 w-8 text-accent-400 mr-4" />
                   <h2 className="text-3xl font-display font-bold text-white">User Responsibilities</h2>
                 </div>
                 <div className="space-y-4 text-gray-300">
@@ -114,7 +114,7 @@ export default function Terms() {
               {/* Disclaimers */}
               <div className="glass-effect p-8 rounded-2xl">
                 <div className="flex items-center mb-6">
-                  <AlertTriangle className="h-8 w-8 text-primary-400 mr-4" />
+                  <AlertTriangle className="h-8 w-8 text-accent-400 mr-4" />
                   <h2 className="text-3xl font-display font-bold text-white">Disclaimers</h2>
                 </div>
                 <div className="space-y-4 text-gray-300">
@@ -144,7 +144,7 @@ export default function Terms() {
               {/* Termination */}
               <div className="glass-effect p-8 rounded-2xl">
                 <div className="flex items-center mb-6">
-                  <AlertTriangle className="h-8 w-8 text-primary-400 mr-4" />
+                  <AlertTriangle className="h-8 w-8 text-accent-400 mr-4" />
                   <h2 className="text-3xl font-display font-bold text-white">Termination</h2>
                 </div>
                 <div className="space-y-4 text-gray-300">
@@ -169,7 +169,7 @@ export default function Terms() {
               {/* Changes */}
               <div className="glass-effect p-8 rounded-2xl">
                 <div className="flex items-center mb-6">
-                  <FileText className="h-8 w-8 text-primary-400 mr-4" />
+                  <FileText className="h-8 w-8 text-accent-400 mr-4" />
                   <h2 className="text-3xl font-display font-bold text-white">Changes to Terms</h2>
                 </div>
                 <div className="space-y-4 text-gray-300">
@@ -188,8 +188,8 @@ export default function Terms() {
                 <div className="space-y-4 text-gray-300">
                   <p>If you have any questions about these Terms of Service, please contact us:</p>
                   <div className="space-y-2 ml-4">
-                    <p>Email: <a href="mailto:hello@vervid.com" className="text-primary-400 hover:text-primary-300">hello@vervid.com</a></p>
-                    <p>Website: <a href="https://vervid.com" className="text-primary-400 hover:text-primary-300">vervid.com</a></p>
+                    <p>Email: <a href="mailto:hello@vervid.com" className="text-accent-400 hover:text-accent-300">hello@vervid.com</a></p>
+                    <p>Website: <a href="https://vervid.com" className="text-accent-400 hover:text-accent-300">vervid.com</a></p>
                   </div>
                 </div>
               </div>

@@ -9,7 +9,6 @@ import {
   Zap,
   Target,
   CheckCircle,
-  Sparkles,
   Users,
   Star,
   Download

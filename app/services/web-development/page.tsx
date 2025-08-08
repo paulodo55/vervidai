@@ -9,8 +9,6 @@ import {
   Zap,
   Target,
   CheckCircle,
-  Sparkles,
-  Users,
   Search,
   Smartphone
 } from 'lucide-react'

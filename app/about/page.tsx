@@ -58,14 +58,14 @@ export default function About() {
       {/* Hero Section */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-accent-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
         <div className="container-custom relative z-10">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-8">
-              <Sparkles className="h-4 w-4 text-primary-400 mr-2" />
+              <Sparkles className="h-4 w-4 text-accent-400 mr-2" />
               <span className="text-sm font-medium">Our Story</span>
             </div>
             
@@ -90,15 +90,15 @@ export default function About() {
             {/* Profile Image Placeholder */}
             <div className="relative">
               <div className="aspect-square rounded-3xl glass-effect p-8 flex items-center justify-center relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 group-hover:from-primary-500/30 group-hover:to-accent-500/30 transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-accent-500/20 to-accent-500/20 group-hover:from-accent-500/30 group-hover:to-accent-500/30 transition-all duration-500"></div>
                 <div className="relative z-10 text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-accent-500 to-accent-500 flex items-center justify-center">
                     <Users className="h-16 w-16 text-white" />
                   </div>
                   <h3 className="text-2xl font-display font-bold gradient-text mb-2">Paul O'Donnell</h3>
                   <p className="text-gray-300">Founder & CEO</p>
                 </div>
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary-400/20 rounded-full blur-xl"></div>
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent-400/20 rounded-full blur-xl"></div>
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent-400/20 rounded-full blur-xl"></div>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function About() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {achievements.map((achievement, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="h-5 w-5 text-primary-400 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-accent-400 flex-shrink-0" />
                       <span className="text-gray-300">{achievement}</span>
                     </div>
                   ))}
@@ -147,7 +147,7 @@ export default function About() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-6">
-              <Rocket className="h-4 w-4 text-primary-400 mr-2" />
+              <Rocket className="h-4 w-4 text-accent-400 mr-2" />
               <span className="text-sm font-medium">The Vision</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
@@ -161,12 +161,12 @@ export default function About() {
             {/* Enhanced Visual Elements */}
             <div className="flex justify-center items-center space-x-12 mb-16">
               <div className="relative">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 morphing-bg glow-pulse"></div>
+                <div className="w-32 h-32 rounded-full bg-gradient-to-r from-accent-500 to-accent-500 morphing-bg glow-pulse"></div>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-500 to-primary-500 morphing-bg glow-pulse opacity-50" style={{ animationDelay: '2s' }}></div>
               </div>
               <div className="w-24 h-24 rounded-full bg-gradient-to-r from-accent-600 to-primary-600 morphing-bg glow-pulse" style={{ animationDelay: '1s' }}></div>
               <div className="relative">
-                <div className="w-28 h-28 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 morphing-bg glow-pulse" style={{ animationDelay: '3s' }}></div>
+                <div className="w-28 h-28 rounded-full bg-gradient-to-r from-accent-600 to-accent-600 morphing-bg glow-pulse" style={{ animationDelay: '3s' }}></div>
                 <div className="absolute inset-4 rounded-full bg-gradient-to-r from-accent-400 to-primary-400 morphing-bg glow-pulse opacity-70" style={{ animationDelay: '1.5s' }}></div>
               </div>
             </div>
@@ -179,7 +179,7 @@ export default function About() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-6">
-              <Target className="h-4 w-4 text-primary-400 mr-2" />
+              <Target className="h-4 w-4 text-accent-400 mr-2" />
               <span className="text-sm font-medium">Our Values</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
@@ -196,7 +196,7 @@ export default function About() {
               <div key={index} className="glass-effect p-8 rounded-2xl card-hover group">
                 <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-accent-500 to-accent-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <value.icon className="h-8 w-8 text-white" />
                     </div>
                   </div>
@@ -217,7 +217,7 @@ export default function About() {
 
       {/* CTA Section */}
       <section className="section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-accent-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-600/20 to-accent-600/20"></div>
         <div className="container-custom relative z-10">
           <div className="text-center">
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
