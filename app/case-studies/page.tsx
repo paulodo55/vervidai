@@ -8,7 +8,8 @@ import {
   Rocket,
   TrendingUp,
   Users,
-  Brain
+  Brain,
+  Target
 } from 'lucide-react'
 
 export default function CaseStudies() {

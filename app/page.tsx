@@ -7,10 +7,7 @@ import {
   Brain, 
   Smartphone, 
   Globe, 
-  TrendingUp, 
-  Zap, 
-  Users, 
-  Award,
+  TrendingUp,
   ChevronDown,
   Sparkles,
   Rocket,
@@ -50,8 +47,6 @@ export default function Home() {
       features: ['Market Analysis', 'Growth Planning', 'Tech Stack Selection', 'Implementation Roadmap']
     }
   ]
-
-
 
   return (
     <div className="min-h-screen">

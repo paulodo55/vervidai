@@ -8,12 +8,10 @@ import {
   TrendingUp, 
   Users, 
   Award,
-  Lightbulb,
   Rocket,
   Target,
   CheckCircle,
-  Sparkles,
-  Zap
+  Sparkles
 } from 'lucide-react'
 
 export default function About() {
@@ -54,8 +52,6 @@ export default function About() {
     'Sales & Business Development',
     'Startup Mentor & Advisor'
   ]
-
-
 
   return (
     <div className="min-h-screen pt-20">
