@@ -51,9 +51,9 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors duration-300">About Us</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors duration-300">Contact</Link></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Case Studies</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
+              <li><Link href="/case-studies" className="text-gray-400 hover:text-white transition-colors duration-300">Case Studies</Link></li>
+              <li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors duration-300">Blog</Link></li>
+              <li><Link href="/careers" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</Link></li>
             </ul>
           </div>
 
@@ -82,12 +82,12 @@ export default function Footer() {
             © 2024 Vervid. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
               Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+            </Link>
+            <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

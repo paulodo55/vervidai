@@ -51,22 +51,19 @@ export default function Home() {
     }
   ]
 
-  const stats = [
-    { number: '50+', label: 'Projects Delivered' },
-    { number: '98%', label: 'Client Satisfaction' },
-    { number: '3x', label: 'Average ROI Increase' },
-    { number: '24/7', label: 'Support Available' }
-  ]
+
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Enhanced Animated Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-400/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl glow-pulse morphing-bg"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl glow-pulse morphing-bg" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-400/10 rounded-full blur-3xl glow-pulse morphing-bg" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-32 right-1/4 w-48 h-48 bg-gradient-to-r from-accent-400 to-primary-500 rounded-full blur-2xl glow-pulse opacity-30" style={{ animationDelay: '3s' }}></div>
+          <div className="absolute bottom-32 left-1/4 w-64 h-64 bg-gradient-to-r from-primary-600 to-accent-600 rounded-full blur-2xl glow-pulse opacity-25" style={{ animationDelay: '4s' }}></div>
         </div>
 
         <div className="container-custom section-padding relative z-10">
@@ -97,22 +94,11 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {stats.map((stat, index) => (
-                <div 
-                  key={index} 
-                  className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                  style={{ transitionDelay: `${index * 200 + 500}ms` }}
-                >
-                  <div className="text-3xl md:text-4xl font-display font-bold gradient-text mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-400 font-medium">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
+            {/* Enhanced Visual Elements */}
+            <div className="flex justify-center items-center space-x-8 mt-8">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 morphing-bg glow-pulse"></div>
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-accent-500 to-primary-500 morphing-bg glow-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="w-20 h-20 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 morphing-bg glow-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
           </div>
         </div>
@@ -144,14 +130,17 @@ export default function Home() {
             {services.map((service, index) => (
               <div 
                 key={index}
-                className="glass-effect p-8 rounded-2xl card-hover group"
+                className="glass-effect p-8 rounded-2xl card-hover group relative overflow-hidden"
               >
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="h-8 w-8 text-white" />
+                {/* Enhanced background effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-accent-500/5 group-hover:from-primary-500/10 group-hover:to-accent-500/10 transition-all duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex items-start space-x-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 glow-effect">
+                        <service.icon className="h-8 w-8 text-white" />
+                      </div>
                     </div>
-                  </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:gradient-text transition-all duration-300">
                       {service.title}
@@ -167,6 +156,7 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -175,9 +165,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Enhanced CTA Section */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-accent-600/20"></div>
+        {/* Additional visual elements */}
+        <div className="absolute top-10 left-10 w-40 h-40 bg-primary-500/20 rounded-full blur-2xl glow-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-56 h-56 bg-accent-500/20 rounded-full blur-2xl glow-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-primary-400/10 to-accent-400/10 rounded-full blur-3xl glow-pulse morphing-bg" style={{ animationDelay: '2s' }}></div>
         <div className="container-custom relative z-10">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-6">

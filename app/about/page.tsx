@@ -55,33 +55,7 @@ export default function About() {
     'Startup Mentor & Advisor'
   ]
 
-  const journey = [
-    {
-      year: '2020',
-      title: 'The Beginning',
-      description: 'Started exploring AI and machine learning while studying computer science, fascinated by the potential to transform businesses.'
-    },
-    {
-      year: '2021',
-      title: 'First Success',
-      description: 'Developed first AI-powered solution for a local business, increasing their efficiency by 300% and sparking the vision for Vervid.'
-    },
-    {
-      year: '2022',
-      title: 'Expanding Horizons',
-      description: 'Mastered web and iOS development, creating comprehensive digital solutions that combine AI with stunning user experiences.'
-    },
-    {
-      year: '2023',
-      title: 'Vervid is Born',
-      description: 'Founded Vervid to help small businesses leverage AI and cutting-edge technology to compete with industry giants.'
-    },
-    {
-      year: '2024',
-      title: 'Scaling Impact',
-      description: 'Serving dozens of clients across various industries, consistently delivering transformative results and building lasting partnerships.'
-    }
-  ]
+
 
   return (
     <div className="min-h-screen pt-20">
@@ -172,46 +146,33 @@ export default function About() {
         </div>
       </section>
 
-      {/* Journey Timeline */}
+      {/* Enhanced Visual Section */}
       <section className="section-padding relative">
         <div className="container-custom">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-6">
               <Rocket className="h-4 w-4 text-primary-400 mr-2" />
-              <span className="text-sm font-medium">The Journey</span>
+              <span className="text-sm font-medium">The Vision</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              From Vision to <span className="gradient-text">Reality</span>
+              Building the <span className="gradient-text">Future</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Every great company has an origin story. Here's how Vervid evolved from a passion project 
-              to a transformative force in AI consulting and digital innovation.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              Vervid represents the next generation of AI consulting - where cutting-edge technology 
+              meets personalized service to create transformative business solutions.
             </p>
-          </div>
-
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 to-accent-500 rounded-full"></div>
             
-            <div className="space-y-16">
-              {journey.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="glass-effect p-6 rounded-2xl card-hover">
-                      <div className="text-primary-400 font-bold text-lg mb-2">{milestone.year}</div>
-                      <h3 className="text-2xl font-display font-bold text-white mb-3">{milestone.title}</h3>
-                      <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
-                    </div>
-                  </div>
-                  
-                  {/* Timeline Node */}
-                  <div className="relative z-10 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full border-4 border-dark-900">
-                    <Zap className="h-6 w-6 text-white" />
-                  </div>
-                  
-                  <div className="w-1/2"></div>
-                </div>
-              ))}
+            {/* Enhanced Visual Elements */}
+            <div className="flex justify-center items-center space-x-12 mb-16">
+              <div className="relative">
+                <div className="w-32 h-32 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 morphing-bg glow-pulse"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-500 to-primary-500 morphing-bg glow-pulse opacity-50" style={{ animationDelay: '2s' }}></div>
+              </div>
+              <div className="w-24 h-24 rounded-full bg-gradient-to-r from-accent-600 to-primary-600 morphing-bg glow-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="relative">
+                <div className="w-28 h-28 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 morphing-bg glow-pulse" style={{ animationDelay: '3s' }}></div>
+                <div className="absolute inset-4 rounded-full bg-gradient-to-r from-accent-400 to-primary-400 morphing-bg glow-pulse opacity-70" style={{ animationDelay: '1.5s' }}></div>
+              </div>
             </div>
           </div>
         </div>
