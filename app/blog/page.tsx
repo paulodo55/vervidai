@@ -41,7 +41,7 @@ export default function Blog() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              AI insights, business strategies, and cutting-edge technology perspectives from Paul and the Vervid team. 
+              AI insights, business strategies, and cutting-edge technology perspectives from the Vervid team. 
               Coming soon to share our knowledge and help you stay ahead.
             </p>
 
@@ -72,7 +72,7 @@ export default function Blog() {
               </h2>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                 We're preparing a comprehensive blog filled with AI insights, business automation strategies, 
-                web development best practices, and iOS app development tips. Paul will share his expertise 
+                web development best practices, and iOS app development tips. We will share our expertise 
                 and the latest trends in technology and business growth.
               </p>
               
@@ -113,7 +113,7 @@ export default function Blog() {
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
                 <Link href="/about" className="btn-secondary">
-                  Learn About Paul
+                  Learn About Us
                 </Link>
               </div>
             </div>

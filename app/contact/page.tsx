@@ -96,7 +96,7 @@ export default function Contact() {
               <span className="gradient-text">Message Sent!</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Thanks for reaching out! Paul will personally review your message and get back to you within 24 hours. 
+              Thanks for reaching out! We will personally review your message and get back to you within 24 hours. 
               We're excited to discuss how we can transform your business together.
             </p>
             <button
@@ -145,7 +145,7 @@ export default function Contact() {
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Let's discuss your vision and create a custom solution that gives you the competitive edge. 
-              Paul is personally invested in your success.
+              We are personally invested in your success.
             </p>
           </div>
         </div>
@@ -346,7 +346,7 @@ export default function Contact() {
               {/* Social Links */}
               <div className="glass-effect p-8 rounded-2xl">
                 <h3 className="text-2xl font-display font-bold mb-6 text-white">
-                  Connect With <span className="gradient-text">Paul</span>
+                  Connect With <span className="gradient-text">Us</span>
                 </h3>
                 <div className="flex space-x-4">
                   <a 

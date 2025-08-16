@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: 'Vervid - AI Consulting & Digital Innovation',
   description: 'Transform your business with cutting-edge AI consulting, custom web development, and iOS app solutions. Expert guidance for small companies to gain competitive advantage.',
   keywords: 'AI consulting, machine learning, web development, iOS apps, digital transformation, business automation',
-  authors: [{ name: 'Paul ODonnell' }],
+  authors: [{ name: 'Vervid Team' }],
   creator: 'Vervid',
   openGraph: {
     title: 'Vervid - AI Consulting & Digital Innovation',

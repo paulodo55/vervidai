@@ -220,7 +220,7 @@ export default function About() {
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Let's have a conversation about your goals and how we can help you achieve them. 
-              Paul is personally invested in your success and ready to make it happen.
+              We are personally invested in your success and ready to make it happen.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/contact" className="btn-primary group text-lg px-10 py-4">

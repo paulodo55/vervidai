@@ -82,7 +82,7 @@ vervid/
 ## 🎯 Pages
 
 - **Homepage** - Hero section, services overview, and compelling CTAs
-- **About** - Paul O'Donnell's story and company values  
+- **About** - Our story and company values  
 - **Contact** - Modern contact form and business information
 - **Service Pages** - Dedicated pages for AI Consulting, Web Development, iOS Development, and Digital Strategy
 - **Legal Pages** - Privacy Policy, Terms of Service, Case Studies, Blog, and Careers
@@ -123,4 +123,4 @@ For questions about this website or Vervid's services:
 
 ---
 
-Built with ❤️ by Paul O'Donnell at Vervid
+Built with ❤️ by the team at Vervid
