@@ -85,7 +85,7 @@ vervid/
 - **About** - Our story and company values  
 - **Contact** - Modern contact form and business information
 - **Service Pages** - Dedicated pages for AI Consulting, Web Development, iOS Development, and Digital Strategy
-- **Legal Pages** - Privacy Policy, Terms of Service, Case Studies, Blog, and Careers
+- **Additional Pages** - Privacy Policy, Terms of Service, and Blog
 
 ## 🌟 Key Components
 
