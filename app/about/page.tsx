@@ -46,7 +46,7 @@ export default function About() {
 
   const achievements = [
     'AI & Machine Learning Expert',
-    'Full-Stack Developer',
+    'Full-Stack AI Developer',
     'iOS App Development Specialist',
     'Digital Strategy Consultant',
     'Sales & Business Development',
