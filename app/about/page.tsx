@@ -107,21 +107,16 @@ export default function About() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-                  Young, <span className="gradient-text">Hungry</span>, and 
-                  <span className="gradient-text"> Ready</span>
+                  <span className="gradient-text">Shaping Tomorrow's</span> Small Businesses, <span className="gradient-text">Today</span>
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  Paul O'Donnell is an AI fanatic and technology visionary who founded Vervid with a simple yet powerful mission: 
-                  to democratize access to cutting-edge AI and digital solutions for small businesses.
+                  Paul O'Donnell is the founder of Vervid, a consulting and development firm that empowers small businesses with world-class AI, app, and web solutions. A relentless problem solver and forward thinker, Paul is passionate about turning complex technology into practical tools that drive growth and competitive advantage.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  As a sales mastermind with deep technical expertise, Paul combines his passion for artificial intelligence 
-                  with an unwavering commitment to client success. He's not just building solutions – he's building the future 
-                  of how businesses operate and compete.
+                  With a rare mix of sales savvy and technical insight, Paul doesn't just deliver projects; he delivers outcomes. From building streamlined apps to designing intelligent digital strategies, his focus is always on helping clients scale, innovate, and win in today's fast-moving market.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  With his unique blend of technical prowess and business acumen, Paul is ready to do whatever it takes 
-                  to help your business not just survive, but absolutely dominate in the digital age.
+                  Driven, adaptable, and laser focused on results, Paul brings an energy and vision that inspires confidence. For him, every project isn't just about solving today's problems; it's about shaping tomorrow's opportunities.
                 </p>
               </div>
 
