@@ -62,7 +62,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Location',
-      content: 'San Francisco, CA',
+      content: 'Austin, TX',
       description: 'Remote-first, global reach'
     },
     {
