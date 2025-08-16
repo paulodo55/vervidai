@@ -23,7 +23,7 @@ export default function WebDevelopment() {
   const benefits = [
     {
       icon: TrendingUp,
-      title: 'Increase Conversions by 300%+',
+      title: 'Increase Web Conversions',
       description: 'Our high-performance websites convert visitors into customers at rates that crush industry averages.'
     },
     {
