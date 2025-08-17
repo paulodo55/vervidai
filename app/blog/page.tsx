@@ -12,9 +12,7 @@ import {
   TrendingUp,
   Calendar,
   Clock,
-  Tag,
-  Zap,
-  Plus
+  Tag
 } from 'lucide-react'
 import { getAllPosts } from '@/lib/blog-data'
 import type { BlogPost } from '@/lib/types'
@@ -23,7 +21,6 @@ import { format } from 'date-fns'
 export default function Blog() {
   const isVisible = useFadeIn()
   const [posts, setPosts] = useState<BlogPost[]>([])
-  const [isGenerating, setIsGenerating] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -37,31 +34,6 @@ export default function Blog() {
       setIsLoading(false)
     }
   }, [])
-
-  const generateNewRecap = async () => {
-    setIsGenerating(true)
-    try {
-      const response = await fetch('/api/generate-recap', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ date: new Date().toISOString() }),
-      })
-      
-      const data = await response.json()
-      if (data.success) {
-        setPosts(getAllPosts()) // Refresh posts
-        alert('New AI recap generated successfully!')
-      } else {
-        alert('Failed to generate recap: ' + data.error)
-      }
-    } catch (error) {
-      alert('Error generating recap: ' + (error as Error).message)
-    } finally {
-      setIsGenerating(false)
-    }
-  }
 
   return (
     <div className="min-h-screen pt-20">
@@ -90,28 +62,14 @@ export default function Blog() {
               Stay ahead of the curve with expert insights from the Vervid team.
             </p>
 
-            {/* Generate New Recap Button */}
+            {/* Newsletter Signup CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <button 
-                onClick={generateNewRecap}
-                disabled={isGenerating}
-                className="btn-primary group disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isGenerating ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Generating AI Recap...
-                  </>
-                ) : (
-                  <>
-                    <Plus className="h-5 w-5 mr-2" />
-                    Generate This Week's AI Recap
-                    <Zap className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                  </>
-                )}
-              </button>
-              <Link href="/contact" className="btn-secondary">
-                Subscribe for Updates
+              <Link href="/contact" className="btn-primary group">
+                Subscribe to Weekly AI Updates
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+              <Link href="/about" className="btn-secondary">
+                Learn About Us
               </Link>
             </div>
 
@@ -220,53 +178,22 @@ export default function Blog() {
               </div>
             </>
           ) : (
-            /* No posts yet - welcome message */
+            /* Loading state or no posts fallback */
             <div className="max-w-4xl mx-auto">
               <div className="glass-effect p-12 rounded-3xl text-center">
                 <TrendingUp className="h-16 w-16 text-accent-400 mx-auto mb-8" />
                 <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">
-                  Ready to <span className="gradient-text">Start</span>
+                  More Content <span className="gradient-text">Coming Soon</span>
                 </h2>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Welcome to the Vervid AI Blog! Click "Generate This Week's AI Recap" above to create 
-                  your first weekly summary of the most important AI developments and industry insights.
+                  We're preparing more AI insights and weekly recaps. Subscribe to our newsletter 
+                  to get notified when new content is published.
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div className="glass-effect p-6 rounded-2xl text-left">
-                    <h3 className="text-xl font-display font-bold mb-3 text-white">AI Weekly Recaps</h3>
-                    <p className="text-gray-300 text-sm">
-                      Comprehensive summaries of AI breakthroughs, funding rounds, product launches, 
-                      and regulatory developments that matter to your business.
-                    </p>
-                  </div>
-                  <div className="glass-effect p-6 rounded-2xl text-left">
-                    <h3 className="text-xl font-display font-bold mb-3 text-white">Business Insights</h3>
-                    <p className="text-gray-300 text-sm">
-                      Expert analysis on how AI developments impact business strategy, competitive 
-                      advantage, and market opportunities.
-                    </p>
-                  </div>
-                </div>
-
-                <button 
-                  onClick={generateNewRecap}
-                  disabled={isGenerating}
-                  className="btn-primary group disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isGenerating ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Generating Your First Recap...
-                    </>
-                  ) : (
-                    <>
-                      <Zap className="h-5 w-5 mr-2" />
-                      Generate Your First AI Recap
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </>
-                  )}
-                </button>
+                <Link href="/contact" className="btn-primary group">
+                  Subscribe for Updates
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
               </div>
             </div>
           )}
