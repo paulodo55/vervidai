@@ -4,12 +4,25 @@ import { BlogPost } from './types'
 // For now, we'll use a simple in-memory store that persists during development
 let blogPosts: BlogPost[] = []
 
+// Flag to track if we're in a build environment
+const isBuildTime = typeof window === 'undefined' && process.env.NODE_ENV !== 'development'
+
 export function getAllPosts(): BlogPost[] {
-  return blogPosts.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+  try {
+    return blogPosts.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+  } catch (error) {
+    console.warn('Error getting blog posts:', error)
+    return []
+  }
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {
-  return blogPosts.find(post => post.slug === slug) || null
+  try {
+    return blogPosts.find(post => post.slug === slug) || null
+  } catch (error) {
+    console.warn('Error getting blog post by slug:', error)
+    return null
+  }
 }
 
 export function addPost(post: BlogPost): void {

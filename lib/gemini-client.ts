@@ -1,10 +1,11 @@
 import { GoogleGenerativeAI } from '@google/generative-ai'
 
-if (!process.env.GEMINI_API_KEY) {
-  throw new Error('GEMINI_API_KEY is not set in environment variables')
-}
+// Initialize Gemini client only if API key is available
+let genAI: GoogleGenerativeAI | null = null
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
+if (process.env.GEMINI_API_KEY) {
+  genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
+}
 
 export async function generateWeeklyAIRecap(weekOf: string): Promise<{
   title: string
@@ -48,6 +49,10 @@ export async function generateWeeklyAIRecap(weekOf: string): Promise<{
   `
 
   try {
+    if (!genAI) {
+      throw new Error('GEMINI_API_KEY is not set in environment variables')
+    }
+
     // Get a reference to the generative model
     const model = genAI.getGenerativeModel({ model: 'gemini-pro' })
 

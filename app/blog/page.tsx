@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useFadeIn, fadeInClasses } from '@/lib/hooks'
 import Link from 'next/link'
 import { 
@@ -22,8 +22,21 @@ import { format } from 'date-fns'
 
 export default function Blog() {
   const isVisible = useFadeIn()
-  const [posts, setPosts] = useState<BlogPost[]>(getAllPosts())
+  const [posts, setPosts] = useState<BlogPost[]>([])
   const [isGenerating, setIsGenerating] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    // Load posts on client side only
+    try {
+      const loadedPosts = getAllPosts()
+      setPosts(loadedPosts)
+    } catch (error) {
+      console.error('Error loading blog posts:', error)
+    } finally {
+      setIsLoading(false)
+    }
+  }, [])
 
   const generateNewRecap = async () => {
     setIsGenerating(true)
@@ -121,7 +134,20 @@ export default function Blog() {
       {/* Blog Posts Section */}
       <section className="section-padding">
         <div className="container-custom">
-          {posts.length > 0 ? (
+          {isLoading ? (
+            /* Loading State */
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-accent-500 to-accent-600 morphing-bg glow-pulse flex items-center justify-center mx-auto mb-8">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
+              </div>
+              <h2 className="text-3xl font-display font-bold text-white mb-4">
+                Loading AI Recaps...
+              </h2>
+              <p className="text-gray-300">
+                Checking for the latest AI industry insights
+              </p>
+            </div>
+          ) : posts.length > 0 ? (
             <>
               <div className="text-center mb-16">
                 <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-6">

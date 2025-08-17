@@ -41,14 +41,42 @@ export default function BlogPost() {
   const params = useParams()
   const [post, setPost] = useState<BlogPost | null>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     if (params.slug) {
-      const foundPost = getPostBySlug(params.slug as string)
-      setPost(foundPost)
-      setIsVisible(true)
+      try {
+        const foundPost = getPostBySlug(params.slug as string)
+        setPost(foundPost)
+        setIsVisible(true)
+      } catch (error) {
+        console.error('Error loading blog post:', error)
+        setPost(null)
+      } finally {
+        setIsLoading(false)
+      }
+    } else {
+      setIsLoading(false)
     }
   }, [params.slug])
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen pt-20 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-accent-500 to-accent-600 morphing-bg glow-pulse flex items-center justify-center mx-auto mb-8">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
+          </div>
+          <h1 className="text-3xl font-display font-bold text-white mb-4">
+            Loading Article...
+          </h1>
+          <p className="text-gray-300">
+            Fetching your AI industry recap
+          </p>
+        </div>
+      </div>
+    )
+  }
 
   if (!post) {
     return (
