@@ -7,7 +7,8 @@ A breathtaking modern website built with Next.js, featuring a sleek dark theme, 
 - **Modern Dark Theme** - Sleek, professional design with attractive color schemes
 - **Stunning Animations** - Smooth transitions and breathtaking visual effects
 - **Responsive Design** - Perfect experience across all devices and generations
-- **AI-Focused Content** - Showcasing cutting-edge AI consulting services
+- **AI-Powered Blog** - Automated weekly AI industry recaps using Google Gemini
+- **AI-Focused Content** - Showcasing cutting-edge AI consulting services  
 - **Performance Optimized** - Built for speed and SEO
 - **Vercel Ready** - Configured for seamless deployment
 

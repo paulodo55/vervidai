@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
     const weekStart = startOfWeek(targetDate, { weekStartsOn: 1 }) // Monday
     const weekOf = format(weekStart, 'MMMM d, yyyy')
 
-    // Generate the recap using OpenAI
+    // Generate the recap using Gemini AI
     const recap = await generateWeeklyAIRecap(weekOf)
 
     // Create blog post object

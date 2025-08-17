@@ -4,8 +4,7 @@ import { BlogPost } from './types'
 // For now, we'll use a simple in-memory store that persists during development
 let blogPosts: BlogPost[] = []
 
-// Flag to track if we're in a build environment
-const isBuildTime = typeof window === 'undefined' && process.env.NODE_ENV !== 'development'
+// In-memory blog storage for development/demo purposes
 
 export function getAllPosts(): BlogPost[] {
   try {

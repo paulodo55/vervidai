@@ -4,14 +4,14 @@
 
 **API Key Exposed**: The Gemini API key was accidentally committed to the GitHub repository in documentation files.
 
-**Exposed Key**: `AIzaSyAxtFBj-LWKk6dahgrwMgutGLPMnpIAFjE`
+**Exposed Key**: `[REVOKED - Key removed for security]`
 
 ## 🔧 IMMEDIATE STEPS TO TAKE
 
 ### 1. **REVOKE THE EXPOSED API KEY** (CRITICAL - DO THIS FIRST)
 
 1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Find the API key: `AIzaSyAxtFBj-LWKk6dahgrwMgutGLPMnpIAFjE`
+2. Find the exposed API key (check your API key list)
 3. **DELETE/REVOKE** this key immediately
 4. This will prevent any unauthorized usage
 

@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    // Generate the recap using OpenAI
+    // Generate the recap using Gemini AI
     const recap = await generateWeeklyAIRecap(weekOf)
 
     // Create blog post object
