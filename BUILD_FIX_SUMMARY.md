@@ -114,8 +114,8 @@ The website will now build successfully on Vercel with:
 For full functionality, set these in your Vercel dashboard:
 
 ```env
-GEMINI_API_KEY=AIzaSyAxtFBj-LWKk6dahgrwMgutGLPMnpIAFjE
-ADMIN_API_KEY=vervid-admin-2024-secure-key
+GEMINI_API_KEY=your_new_gemini_api_key_here
+ADMIN_API_KEY=your_secure_admin_key_here
 ```
 
 ### 🚀 **Testing the Fix**
