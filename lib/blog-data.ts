@@ -4,8 +4,6 @@ import { BlogPost } from './types'
 // For now, we'll use a simple in-memory store that persists during development
 let blogPosts: BlogPost[] = []
 
-// In-memory blog storage for development/demo purposes
-
 export function getAllPosts(): BlogPost[] {
   try {
     return blogPosts.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
