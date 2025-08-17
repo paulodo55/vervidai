@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useFadeIn, fadeInClasses } from '@/lib/hooks'
 import Link from 'next/link'
 import { 
   ArrowRight, 
@@ -15,11 +15,7 @@ import {
 } from 'lucide-react'
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
+  const isVisible = useFadeIn()
 
   const services = [
     {
@@ -66,8 +62,8 @@ export default function Home() {
         </div>
 
         <div className="container-custom section-padding relative z-10">
-          <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-8 animate-fade-in">
+          <div className={`text-center ${fadeInClasses(isVisible)}`}>
+            <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-8">
               <Sparkles className="h-4 w-4 text-accent-400 mr-2" />
               <span className="text-sm font-medium">Transforming Businesses with AI</span>
             </div>

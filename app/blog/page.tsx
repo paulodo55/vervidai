@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { useFadeIn, fadeInClasses } from '@/lib/hooks'
 import Link from 'next/link'
 import { 
   ArrowRight, 
@@ -8,15 +9,46 @@ import {
   BookOpen,
   PenTool,
   Lightbulb,
-  TrendingUp
+  TrendingUp,
+  Calendar,
+  Clock,
+  Tag,
+  Zap,
+  Plus
 } from 'lucide-react'
+import { getAllPosts } from '@/lib/blog-data'
+import { BlogPost } from '@/lib/types'
+import { format } from 'date-fns'
 
 export default function Blog() {
-  const [isVisible, setIsVisible] = useState(false)
+  const isVisible = useFadeIn()
+  const [posts, setPosts] = useState<BlogPost[]>(getAllPosts())
+  const [isGenerating, setIsGenerating] = useState(false)
 
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
+  const generateNewRecap = async () => {
+    setIsGenerating(true)
+    try {
+      const response = await fetch('/api/generate-recap', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ date: new Date().toISOString() }),
+      })
+      
+      const data = await response.json()
+      if (data.success) {
+        setPosts(getAllPosts()) // Refresh posts
+        alert('New AI recap generated successfully!')
+      } else {
+        alert('Failed to generate recap: ' + data.error)
+      }
+    } catch (error) {
+      alert('Error generating recap: ' + (error as Error).message)
+    } finally {
+      setIsGenerating(false)
+    }
+  }
 
   return (
     <div className="min-h-screen pt-20">
@@ -28,10 +60,10 @@ export default function Blog() {
         </div>
 
         <div className="container-custom relative z-10">
-          <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className={`text-center ${fadeInClasses(isVisible)}`}>
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-8">
               <Sparkles className="h-4 w-4 text-accent-400 mr-2" />
-              <span className="text-sm font-medium">Insights & Knowledge</span>
+              <span className="text-sm font-medium">AI Insights & Weekly Recaps</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
@@ -41,16 +73,41 @@ export default function Blog() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              AI insights, business strategies, and cutting-edge technology perspectives from the Vervid team. 
-              Coming soon to share our knowledge and help you stay ahead.
+              Weekly AI news recaps, business strategies, and cutting-edge technology perspectives. 
+              Stay ahead of the curve with expert insights from the Vervid team.
             </p>
 
+            {/* Generate New Recap Button */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <button 
+                onClick={generateNewRecap}
+                disabled={isGenerating}
+                className="btn-primary group disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isGenerating ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                    Generating AI Recap...
+                  </>
+                ) : (
+                  <>
+                    <Plus className="h-5 w-5 mr-2" />
+                    Generate This Week's AI Recap
+                    <Zap className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                  </>
+                )}
+              </button>
+              <Link href="/contact" className="btn-secondary">
+                Subscribe for Updates
+              </Link>
+            </div>
+
             {/* Enhanced Visual Elements */}
-            <div className="flex justify-center items-center space-x-8 mb-16">
+            <div className="flex justify-center items-center space-x-8">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-accent-500 to-accent-500 morphing-bg glow-pulse flex items-center justify-center">
                 <BookOpen className="h-8 w-8 text-white" />
               </div>
-              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-accent-500 to-primary-500 morphing-bg glow-pulse flex items-center justify-center" style={{ animationDelay: '1s' }}>
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-accent-500 to-accent-600 morphing-bg glow-pulse flex items-center justify-center" style={{ animationDelay: '1s' }}>
                 <PenTool className="h-6 w-6 text-white" />
               </div>
               <div className="w-20 h-20 rounded-full bg-gradient-to-r from-accent-600 to-accent-600 morphing-bg glow-pulse flex items-center justify-center" style={{ animationDelay: '2s' }}>
@@ -61,83 +118,132 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Coming Soon Content */}
+      {/* Blog Posts Section */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <div className="glass-effect p-12 rounded-3xl text-center">
-              <TrendingUp className="h-16 w-16 text-accent-400 mx-auto mb-8" />
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">
-                Knowledge <span className="gradient-text">Coming Soon</span>
-              </h2>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                We're preparing a comprehensive blog filled with AI insights, business automation strategies, 
-                web development best practices, and iOS app development tips. We will share our expertise 
-                and the latest trends in technology and business growth.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="glass-effect p-6 rounded-2xl text-left">
-                  <h3 className="text-xl font-display font-bold mb-3 text-white">AI & Machine Learning</h3>
-                  <p className="text-gray-300 text-sm">
-                    Deep dives into AI implementation, automation strategies, and how small businesses 
-                    can leverage machine learning for competitive advantage.
-                  </p>
+          {posts.length > 0 ? (
+            <>
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-6">
+                  <TrendingUp className="h-4 w-4 text-accent-400 mr-2" />
+                  <span className="text-sm font-medium">Latest AI Insights</span>
                 </div>
-                <div className="glass-effect p-6 rounded-2xl text-left">
-                  <h3 className="text-xl font-display font-bold mb-3 text-white">Business Growth</h3>
-                  <p className="text-gray-300 text-sm">
-                    Sales strategies, digital transformation insights, and practical advice for 
-                    scaling your business with technology.
-                  </p>
-                </div>
-                <div className="glass-effect p-6 rounded-2xl text-left">
-                  <h3 className="text-xl font-display font-bold mb-3 text-white">Development Insights</h3>
-                  <p className="text-gray-300 text-sm">
-                    Web development trends, iOS app best practices, and technical tutorials 
-                    for building high-performance digital solutions.
-                  </p>
-                </div>
-                <div className="glass-effect p-6 rounded-2xl text-left">
-                  <h3 className="text-xl font-display font-bold mb-3 text-white">Industry Trends</h3>
-                  <p className="text-gray-300 text-sm">
-                    Analysis of emerging technologies, market predictions, and how to stay 
-                    ahead of the competition in the digital age.
-                  </p>
-                </div>
+                <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
+                  Weekly <span className="gradient-text">AI Recaps</span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Stay informed with our comprehensive weekly summaries of the most significant AI developments, 
+                  breakthroughs, and industry trends.
+                </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="btn-primary group">
-                  Get Notified When We Launch
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-                <Link href="/about" className="btn-secondary">
-                  Learn About Us
-                </Link>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {posts.map((post, index) => (
+                  <Link 
+                    key={post.id}
+                    href={`/blog/${post.slug}`}
+                    className="glass-effect p-8 rounded-2xl card-hover group relative overflow-hidden block"
+                  >
+                    {/* Background effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent-500/5 to-white/5 group-hover:from-accent-500/10 group-hover:to-white/10 transition-all duration-500"></div>
+                    
+                    <div className="relative z-10">
+                      {/* Post metadata */}
+                      <div className="flex items-center space-x-4 mb-4">
+                        <div className="flex items-center text-accent-400 text-sm">
+                          <Calendar className="h-4 w-4 mr-1" />
+                          {format(new Date(post.publishedAt), 'MMM d, yyyy')}
+                        </div>
+                        <div className="flex items-center text-gray-400 text-sm">
+                          <Clock className="h-4 w-4 mr-1" />
+                          {post.readTime} min read
+                        </div>
+                      </div>
+
+                      {/* Post title */}
+                      <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:gradient-text transition-all duration-300">
+                        {post.title}
+                      </h3>
+
+                      {/* Post excerpt */}
+                      <p className="text-gray-300 mb-6 leading-relaxed line-clamp-3">
+                        {post.excerpt}
+                      </p>
+
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {post.tags.slice(0, 3).map((tag, tagIndex) => (
+                          <span 
+                            key={tagIndex}
+                            className="inline-flex items-center px-3 py-1 rounded-full bg-accent-500/20 text-accent-300 text-sm"
+                          >
+                            <Tag className="h-3 w-3 mr-1" />
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Read more link */}
+                      <div className="flex items-center text-accent-400 font-semibold">
+                        Read Full Recap 
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </>
+          ) : (
+            /* No posts yet - welcome message */
+            <div className="max-w-4xl mx-auto">
+              <div className="glass-effect p-12 rounded-3xl text-center">
+                <TrendingUp className="h-16 w-16 text-accent-400 mx-auto mb-8" />
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">
+                  Ready to <span className="gradient-text">Start</span>
+                </h2>
+                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                  Welcome to the Vervid AI Blog! Click "Generate This Week's AI Recap" above to create 
+                  your first weekly summary of the most important AI developments and industry insights.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div className="glass-effect p-6 rounded-2xl text-left">
+                    <h3 className="text-xl font-display font-bold mb-3 text-white">AI Weekly Recaps</h3>
+                    <p className="text-gray-300 text-sm">
+                      Comprehensive summaries of AI breakthroughs, funding rounds, product launches, 
+                      and regulatory developments that matter to your business.
+                    </p>
+                  </div>
+                  <div className="glass-effect p-6 rounded-2xl text-left">
+                    <h3 className="text-xl font-display font-bold mb-3 text-white">Business Insights</h3>
+                    <p className="text-gray-300 text-sm">
+                      Expert analysis on how AI developments impact business strategy, competitive 
+                      advantage, and market opportunities.
+                    </p>
+                  </div>
+                </div>
+
+                <button 
+                  onClick={generateNewRecap}
+                  disabled={isGenerating}
+                  className="btn-primary group disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isGenerating ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Generating Your First Recap...
+                    </>
+                  ) : (
+                    <>
+                      <Zap className="h-5 w-5 mr-2" />
+                      Generate Your First AI Recap
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </>
+                  )}
+                </button>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-accent-600/20 to-accent-600/20"></div>
-        <div className="container-custom relative z-10">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              Stay <span className="gradient-text">Informed</span>
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Be the first to access our AI insights, business strategies, and exclusive content 
-              when our blog launches.
-            </p>
-            <Link href="/contact" className="btn-primary group text-lg px-10 py-4">
-              Subscribe for Updates
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
-          </div>
+          )}
         </div>
       </section>
     </div>

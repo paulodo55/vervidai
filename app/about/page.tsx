@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useFadeIn, fadeInClasses } from '@/lib/hooks'
 import Link from 'next/link'
 import { 
   ArrowRight, 
@@ -15,11 +15,7 @@ import {
 } from 'lucide-react'
 
 export default function About() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
+  const isVisible = useFadeIn()
 
   const values = [
     {
@@ -63,7 +59,7 @@ export default function About() {
         </div>
 
         <div className="container-custom relative z-10">
-          <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className={`text-center ${fadeInClasses(isVisible)}`}>
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-8">
               <Sparkles className="h-4 w-4 text-accent-400 mr-2" />
               <span className="text-sm font-medium">Our Story</span>
@@ -157,12 +153,12 @@ export default function About() {
             <div className="flex justify-center items-center space-x-12 mb-16">
               <div className="relative">
                 <div className="w-32 h-32 rounded-full bg-gradient-to-r from-accent-500 to-accent-500 morphing-bg glow-pulse"></div>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-500 to-primary-500 morphing-bg glow-pulse opacity-50" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-500 to-accent-600 morphing-bg glow-pulse opacity-50" style={{ animationDelay: '2s' }}></div>
               </div>
-              <div className="w-24 h-24 rounded-full bg-gradient-to-r from-accent-600 to-primary-600 morphing-bg glow-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="w-24 h-24 rounded-full bg-gradient-to-r from-accent-600 to-accent-700 morphing-bg glow-pulse" style={{ animationDelay: '1s' }}></div>
               <div className="relative">
                 <div className="w-28 h-28 rounded-full bg-gradient-to-r from-accent-600 to-accent-600 morphing-bg glow-pulse" style={{ animationDelay: '3s' }}></div>
-                <div className="absolute inset-4 rounded-full bg-gradient-to-r from-accent-400 to-primary-400 morphing-bg glow-pulse opacity-70" style={{ animationDelay: '1.5s' }}></div>
+                <div className="absolute inset-4 rounded-full bg-gradient-to-r from-accent-400 to-accent-500 morphing-bg glow-pulse opacity-70" style={{ animationDelay: '1.5s' }}></div>
               </div>
             </div>
           </div>

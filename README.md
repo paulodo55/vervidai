@@ -16,7 +16,7 @@ A breathtaking modern website built with Next.js, featuring a sleek dark theme, 
 - **Framework**: Next.js 14 with TypeScript
 - **Styling**: Tailwind CSS with custom animations
 - **Icons**: Lucide React
-- **Animations**: Framer Motion
+- **AI Integration**: Google Gemini Pro
 - **Deployment**: Vercel
 
 ## 🎨 Design Features
@@ -85,7 +85,8 @@ vervid/
 - **About** - Our story and company values  
 - **Contact** - Modern contact form and business information
 - **Service Pages** - Dedicated pages for AI Consulting, Web Development, iOS Development, and Digital Strategy
-- **Additional Pages** - Privacy Policy, Terms of Service, and Blog
+- **AI Blog** - Automated weekly AI industry recaps powered by Google Gemini
+- **Additional Pages** - Privacy Policy, Terms of Service
 
 ## 🌟 Key Components
 

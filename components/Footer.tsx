@@ -10,8 +10,8 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2 group">
               <div className="relative">
-                <Zap className="h-8 w-8 text-primary-400 transform group-hover:scale-110 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-primary-400 blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <Zap className="h-8 w-8 text-accent-400 transform group-hover:scale-110 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-accent-400 blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
               </div>
               <span className="text-2xl font-display font-bold gradient-text">
                 Vervid
@@ -21,13 +21,13 @@ export default function Footer() {
               Transforming businesses with cutting-edge AI consulting and innovative digital solutions. Your competitive edge starts here.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+              <a href="#" className="text-gray-400 hover:text-accent-400 transition-colors duration-300">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+              <a href="#" className="text-gray-400 hover:text-accent-400 transition-colors duration-300">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+              <a href="#" className="text-gray-400 hover:text-accent-400 transition-colors duration-300">
                 <Github className="h-5 w-5" />
               </a>
             </div>

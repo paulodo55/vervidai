@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* Fonts are loaded via Next.js font optimization in layout.tsx */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -87,6 +87,54 @@
   .container-custom {
     @apply max-w-7xl mx-auto;
   }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Blog post content styling */
+  .prose h1 {
+    @apply text-4xl font-display font-bold text-white mb-8 mt-12;
+  }
+
+  .prose h2 {
+    @apply text-3xl font-display font-bold text-white mb-6 mt-10;
+  }
+
+  .prose h3 {
+    @apply text-2xl font-display font-bold text-white mb-4 mt-8;
+  }
+
+  .prose p {
+    @apply text-gray-300 mb-6 leading-relaxed;
+  }
+
+  .prose strong {
+    @apply font-bold text-white;
+  }
+
+  .prose em {
+    @apply italic text-gray-300;
+  }
+
+  .prose a {
+    @apply text-accent-400 hover:text-accent-300 underline transition-colors duration-300;
+  }
+
+  .prose ul {
+    @apply mb-6;
+  }
+
+  .prose li {
+    @apply text-gray-300 mb-2 ml-4;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-accent-500 pl-6 ml-4 italic text-gray-300 bg-accent-500/5 py-4 rounded-r-lg;
+  }
 }
 
 /* Custom scrollbar */
@@ -99,11 +147,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary-600 rounded-full;
+  @apply bg-accent-600 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary-500;
+  @apply bg-accent-500;
 }
 
 /* Smooth transitions for all elements */

@@ -179,7 +179,7 @@ export default function Contact() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 bg-dark-800/50 text-white placeholder-gray-400 transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 bg-dark-800/50 text-white placeholder-gray-400 transition-all duration-300"
                       placeholder="John Doe"
                     />
                   </div>
@@ -194,7 +194,7 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 bg-dark-800/50 text-white placeholder-gray-400 transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 bg-dark-800/50 text-white placeholder-gray-400 transition-all duration-300"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -211,7 +211,7 @@ export default function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 bg-dark-800/50 text-white placeholder-gray-400 transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 bg-dark-800/50 text-white placeholder-gray-400 transition-all duration-300"
                       placeholder="Your Company"
                     />
                   </div>
@@ -224,7 +224,7 @@ export default function Contact() {
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 bg-dark-800/50 text-white transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 bg-dark-800/50 text-white transition-all duration-300"
                     >
                       <option value="">Select Budget Range</option>
                       <option value="5k-15k">$5K - $15K</option>
@@ -245,7 +245,7 @@ export default function Contact() {
                     required
                     value={formData.project}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 bg-dark-800/50 text-white transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 bg-dark-800/50 text-white transition-all duration-300"
                   >
                     <option value="">Select Project Type</option>
                     <option value="ai-consulting">AI Consulting & Strategy</option>
@@ -268,7 +268,7 @@ export default function Contact() {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 bg-dark-800/50 text-white placeholder-gray-400 transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 bg-dark-800/50 text-white placeholder-gray-400 transition-all duration-300 resize-none"
                     placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
                   />
                 </div>
