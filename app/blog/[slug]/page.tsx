@@ -13,7 +13,7 @@ import {
   TrendingUp
 } from 'lucide-react'
 import { getPostBySlug } from '@/lib/blog-data'
-import { BlogPost } from '@/lib/types'
+import type { BlogPost } from '@/lib/types'
 import { format } from 'date-fns'
 
 // Simple markdown parser for basic formatting

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { generateWeeklyAIRecap } from '@/lib/gemini-client'
 import { addPost, generateSlug, estimateReadTime } from '@/lib/blog-data'
-import { BlogPost } from '@/lib/types'
+import type { BlogPost } from '@/lib/types'
 import { format, startOfWeek } from 'date-fns'
 
 export async function POST(request: NextRequest) {
