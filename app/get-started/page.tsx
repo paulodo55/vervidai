@@ -4,11 +4,6 @@ import { useState } from 'react'
 import { useFadeIn, fadeInClasses } from '@/lib/hooks'
 import { 
   Rocket, 
-  Mail, 
-  Phone, 
-  Building, 
-  MessageSquare, 
-  DollarSign, 
   Send, 
   CheckCircle,
   Sparkles,
@@ -98,7 +93,8 @@ export default function GetStarted() {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
     
-    console.log('Form submitted:', formData)
+    // In production, this would send the form data to your backend
+    // console.log('Form submitted:', formData)
     setIsSubmitted(true)
     setIsSubmitting(false)
   }
