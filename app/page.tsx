@@ -190,7 +190,7 @@ export default function Home() {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
               <Link href="/about" className="btn-secondary text-lg px-10 py-4">
-                Meet the Team
+                Meet the Founder
               </Link>
             </div>
           </div>
