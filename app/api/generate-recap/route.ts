@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
       title: recap.title,
       content: recap.content,
       excerpt: recap.excerpt,
-      publishedAt: new Date().toISOString(),
+      publishedAt: new Date(new Date().getTime() - (6 * 60 * 60 * 1000)).toISOString(), // CST (UTC-6)
       weekOf: weekOf,
       slug: generateSlug(recap.title),
       tags: recap.tags,

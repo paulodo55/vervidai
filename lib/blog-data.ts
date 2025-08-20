@@ -31,7 +31,7 @@ The EU AI Act continues to shape global AI governance, with new guidelines for r
 
 The convergence of cost-effective AI solutions and clear regulatory frameworks is creating unprecedented opportunities for businesses to leverage artificial intelligence strategically.`,
     excerpt: 'This week brought major AI breakthroughs in enterprise adoption, cost-effective training methods, and regulatory developments that will shape the future of business AI implementation.',
-    publishedAt: '2025-08-20T11:41:00Z',
+    publishedAt: '2025-08-20T17:41:00Z', // 11:41 AM CST = 17:41 UTC
     weekOf: 'August 20, 2025',
     slug: 'ai-weekly-recap-major-breakthroughs-enterprise-ai',
     tags: ['AI', 'Enterprise', 'Technology', 'Business'],
@@ -77,7 +77,7 @@ For businesses considering AI adoption:
 
 The massive investment influx signals a maturation of the AI market and validates the transformative potential of artificial intelligence across industries.`,
     excerpt: 'The AI sector attracted over $50 billion in funding this week, driving valuations higher and intensifying competition for talent while creating new partnership opportunities.',
-    publishedAt: '2025-08-13T11:41:00Z',
+    publishedAt: '2025-08-13T17:41:00Z', // 11:41 AM CST = 17:41 UTC
     weekOf: 'August 13, 2025',
     slug: 'ai-investment-surge-50b-funding-reshapes-industry',
     tags: ['AI', 'Investment', 'Funding', 'Market Analysis'],
