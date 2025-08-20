@@ -57,7 +57,7 @@ export async function GET() {
     example: {
       method: 'POST',
       body: {
-        date: '2024-01-15' // Optional: specific date, defaults to current week
+        date: '2025-08-20' // Optional: specific date, defaults to current week
       }
     }
   })

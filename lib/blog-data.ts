@@ -4,7 +4,7 @@ import { BlogPost } from './types'
 // For now, we'll use a simple in-memory store that persists during development
 let blogPosts: BlogPost[] = [
   {
-    id: 'ai-recap-2024-01-15',
+    id: 'ai-recap-2025-08-20',
     title: 'AI Weekly Recap: Major Breakthroughs in Enterprise AI',
     content: `# AI Weekly Recap: Major Breakthroughs in Enterprise AI
 
@@ -13,7 +13,7 @@ This week brought significant developments in the AI industry, with major announ
 ## Key Highlights
 
 ### Enterprise AI Adoption Accelerates
-Organizations worldwide are increasingly integrating AI into their core business processes. Recent studies show that 73% of enterprises plan to increase their AI investments in 2024, driven by proven ROI and competitive advantages.
+Organizations worldwide are increasingly integrating AI into their core business processes. Recent studies show that 85% of enterprises plan to increase their AI investments in 2025, driven by proven ROI and competitive advantages.
 
 ### Breakthrough in Large Language Models
 New research has demonstrated improved efficiency in language model training, reducing computational costs by up to 40% while maintaining performance. This development makes advanced AI more accessible to smaller organizations.
@@ -31,14 +31,14 @@ The EU AI Act continues to shape global AI governance, with new guidelines for r
 
 The convergence of cost-effective AI solutions and clear regulatory frameworks is creating unprecedented opportunities for businesses to leverage artificial intelligence strategically.`,
     excerpt: 'This week brought major AI breakthroughs in enterprise adoption, cost-effective training methods, and regulatory developments that will shape the future of business AI implementation.',
-    publishedAt: '2024-01-15T10:00:00Z',
-    weekOf: 'January 15, 2024',
+    publishedAt: '2025-08-20T11:41:00Z',
+    weekOf: 'August 20, 2025',
     slug: 'ai-weekly-recap-major-breakthroughs-enterprise-ai',
     tags: ['AI', 'Enterprise', 'Technology', 'Business'],
     readTime: 3
   },
   {
-    id: 'ai-recap-2024-01-08',
+    id: 'ai-recap-2025-08-13',
     title: 'AI Investment Surge: $50B in Funding Reshapes Industry',
     content: `# AI Investment Surge: $50B in Funding Reshapes Industry
 
@@ -77,8 +77,8 @@ For businesses considering AI adoption:
 
 The massive investment influx signals a maturation of the AI market and validates the transformative potential of artificial intelligence across industries.`,
     excerpt: 'The AI sector attracted over $50 billion in funding this week, driving valuations higher and intensifying competition for talent while creating new partnership opportunities.',
-    publishedAt: '2024-01-08T10:00:00Z',
-    weekOf: 'January 8, 2024',
+    publishedAt: '2025-08-13T11:41:00Z',
+    weekOf: 'August 13, 2025',
     slug: 'ai-investment-surge-50b-funding-reshapes-industry',
     tags: ['AI', 'Investment', 'Funding', 'Market Analysis'],
     readTime: 4

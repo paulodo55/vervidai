@@ -37,7 +37,7 @@ export default function Privacy() {
             </p>
             
             <div className="text-gray-400 text-sm">
-              Last updated: December 2024
+              Last updated: August 2025
             </div>
           </div>
         </div>
