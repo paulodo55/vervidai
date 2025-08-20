@@ -52,7 +52,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/get-started"
               className="btn-primary"
             >
               Get Started
@@ -85,7 +85,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/get-started"
             className="block w-full text-center btn-primary"
             onClick={() => setIsOpen(false)}
           >
