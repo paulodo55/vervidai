@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
-import { addSubscriber } from '@/lib/subscribers'
+import { addSubscriber, getSubscribers } from '@/lib/simple-db'
 import { generateWelcomeEmail } from '@/lib/email-templates'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -36,8 +36,8 @@ export async function POST(request: NextRequest) {
       
       if (added) {
         // Get the subscriber with the generated token
-        const subscribers = require('@/lib/subscribers').getSubscribers()
-        const subscriber = subscribers.find((sub: any) => sub.email === email.toLowerCase())
+        const allSubscribers = getSubscribers()
+        const subscriber = allSubscribers.find(sub => sub.email === email.toLowerCase())
         
         if (subscriber) {
           const welcomeHtml = generateWelcomeEmail(name, subscriber.unsubscribeToken)

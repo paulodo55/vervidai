@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
-import { getActiveSubscribers } from '@/lib/subscribers'
+import { getActiveSubscribers } from '@/lib/simple-db'
 import { generateNewsletterHTML } from '@/lib/email-templates'
 import { generateWeeklyAIRecap } from '@/lib/gemini-client'
 import { format } from 'date-fns'
+
+// Force dynamic rendering for this API route
+export const dynamic = 'force-dynamic'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
