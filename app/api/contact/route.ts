@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { addSubscriber } from '@/lib/subscribers'
+import { generateWelcomeEmail } from '@/lib/email-templates'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -29,7 +31,27 @@ export async function POST(request: NextRequest) {
     let htmlContent: string
 
     if (type === 'newsletter') {
-      // Newsletter signup
+      // Add subscriber to database
+      const added = addSubscriber(email, name)
+      
+      if (added) {
+        // Get the subscriber with the generated token
+        const subscribers = require('@/lib/subscribers').getSubscribers()
+        const subscriber = subscribers.find((sub: any) => sub.email === email.toLowerCase())
+        
+        if (subscriber) {
+          const welcomeHtml = generateWelcomeEmail(name, subscriber.unsubscribeToken)
+          
+          await resend.emails.send({
+            from: 'Vervid AI Weekly <newsletter@vervidai.com>',
+            to: [email],
+            subject: 'Welcome to Vervid AI Weekly! 🚀',
+            html: welcomeHtml,
+          })
+        }
+      }
+
+      // Newsletter signup notification to admin
       subject = 'New Newsletter Subscription - Vervid AI'
       htmlContent = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -37,12 +59,13 @@ export async function POST(request: NextRequest) {
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Subscription Date:</strong> ${new Date().toLocaleDateString()}</p>
+          <p><strong>Status:</strong> ${added ? 'Added to subscriber list' : 'Already subscribed'}</p>
           
           <hr style="margin: 20px 0; border: none; border-top: 1px solid #e5e7eb;">
           
           <p style="color: #6b7280; font-size: 14px;">
-            This person has subscribed to your weekly AI updates newsletter.
-            You may want to add them to your mailing list.
+            This person has been automatically added to your weekly AI newsletter list.
+            ${added ? 'They will receive weekly updates starting this Friday.' : 'They were already subscribed.'}
           </p>
         </div>
       `
