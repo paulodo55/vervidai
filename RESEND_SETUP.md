@@ -94,12 +94,12 @@ Value: _dmarc.resend.com
 
 ## 📧 **Step 6: Update Email Addresses**
 
-The system is configured to send emails to `hello@vervid.com`. Make sure this email exists or update the API files:
+The system is configured to send emails to `hello@vervidai.com`. Make sure this email exists or update the API files:
 
 - `/app/api/contact/route.ts` - Line 52
 - `/app/api/get-started/route.ts` - Line 88
 
-Change `hello@vervid.com` to your actual business email.
+Change `hello@vervidai.com` to your actual business email.
 
 ## 🚀 **Step 7: Deploy to Vercel**
 

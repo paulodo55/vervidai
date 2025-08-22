@@ -60,7 +60,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-accent-400" />
-                <span className="text-gray-400">hello@vervid.com</span>
+                <span className="text-gray-400">hello@vervidai.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent-400" />

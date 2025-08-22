@@ -188,7 +188,7 @@ export default function Terms() {
                 <div className="space-y-4 text-gray-300">
                   <p>If you have any questions about these Terms of Service, please contact us:</p>
                   <div className="space-y-2 ml-4">
-                    <p>Email: <a href="mailto:hello@vervid.com" className="text-accent-400 hover:text-accent-300">hello@vervid.com</a></p>
+                    <p>Email: <a href="mailto:hello@vervidai.com" className="text-accent-400 hover:text-accent-300">hello@vervidai.com</a></p>
                     <p>Website: <a href="https://vervid.com" className="text-accent-400 hover:text-accent-300">vervid.com</a></p>
                   </div>
                 </div>

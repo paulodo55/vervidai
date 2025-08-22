@@ -119,7 +119,7 @@ This project is private and proprietary to Vervid.
 ## 🤝 Contact
 
 For questions about this website or Vervid's services:
-- Email: hello@vervid.com
+- Email: hello@vervidai.com
 - Location: Austin, TX
 - Website: [vervid.com](https://vervid.com)
 

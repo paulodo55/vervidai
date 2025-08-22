@@ -117,7 +117,7 @@ export async function POST(request: NextRequest) {
     // Send email using Resend
     const data = await resend.emails.send({
       from: 'Vervid Project Inquiries <projects@vervidai.com>',
-      to: ['hello@vervid.com'], // Your business email
+      to: ['hello@vervidai.com'], // Your business email
       subject: subject,
       html: htmlContent,
       replyTo: email,
