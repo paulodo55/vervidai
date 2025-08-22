@@ -234,7 +234,7 @@ export default function GetStarted() {
                     value={formData.phone}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 rounded-lg glass-effect border border-dark-600 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 bg-dark-800/50 text-white placeholder-gray-400 transition-all duration-300"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="512-264-5260"
                   />
                 </div>
 
