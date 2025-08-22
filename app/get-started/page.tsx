@@ -90,12 +90,27 @@ export default function GetStarted() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    try {
+      const response = await fetch('/api/get-started', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+      } else {
+        const errorData = await response.json()
+        console.error('Form submission failed:', errorData.error)
+        alert('Failed to submit inquiry. Please try again.')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      alert('Failed to submit inquiry. Please try again.')
+    }
     
-    // In production, this would send the form data to your backend
-    // console.log('Form submitted:', formData)
-    setIsSubmitted(true)
     setIsSubmitting(false)
   }
 

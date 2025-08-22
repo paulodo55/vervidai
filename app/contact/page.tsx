@@ -35,10 +35,33 @@ export default function Contact() {
     e.preventDefault()
     setIsNewsletterSubmitting(true)
     
-    // Simulate newsletter signup API call
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: newsletterData.name,
+          email: newsletterData.email,
+          message: `Newsletter subscription request from ${newsletterData.name}`,
+          type: 'newsletter'
+        }),
+      })
+
+      if (response.ok) {
+        setIsNewsletterSubmitted(true)
+      } else {
+        const errorData = await response.json()
+        console.error('Newsletter signup failed:', errorData.error)
+        // You might want to show an error message to the user here
+        alert('Failed to subscribe to newsletter. Please try again.')
+      }
+    } catch (error) {
+      console.error('Newsletter signup error:', error)
+      alert('Failed to subscribe to newsletter. Please try again.')
+    }
     
-    setIsNewsletterSubmitted(true)
     setIsNewsletterSubmitting(false)
   }
 
@@ -46,10 +69,32 @@ export default function Contact() {
     e.preventDefault()
     setIsQuestionSubmitting(true)
     
-    // Simulate question submission API call
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: questionData.name,
+          email: questionData.email,
+          message: questionData.message,
+          type: 'question'
+        }),
+      })
+
+      if (response.ok) {
+        setIsQuestionSubmitted(true)
+      } else {
+        const errorData = await response.json()
+        console.error('Question submission failed:', errorData.error)
+        alert('Failed to send message. Please try again.')
+      }
+    } catch (error) {
+      console.error('Question submission error:', error)
+      alert('Failed to send message. Please try again.')
+    }
     
-    setIsQuestionSubmitted(true)
     setIsQuestionSubmitting(false)
   }
 
