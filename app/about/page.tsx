@@ -83,11 +83,8 @@ export default function About() {
           <div className="max-w-4xl mx-auto text-center">
             {/* Founder Header */}
             <div className="mb-12">
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-accent-500 to-accent-500 flex items-center justify-center glow-pulse">
-                <Users className="h-16 w-16 text-white" />
-              </div>
-              <h3 className="text-3xl font-display font-bold gradient-text mb-2">Paul O'Donnell</h3>
-              <p className="text-xl text-gray-300">Founder & CEO</p>
+              <h3 className="text-5xl md:text-6xl font-display font-bold gradient-text mb-4">Paul O'Donnell</h3>
+              <p className="text-2xl md:text-3xl text-gray-300 font-medium">Founder & CEO</p>
             </div>
 
             {/* Bio Content */}
