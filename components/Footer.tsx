@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Zap, Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
+import { Zap, Mail, Phone, MapPin, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -20,15 +20,9 @@ export default function Footer() {
             <p className="text-gray-400 leading-relaxed">
               Transforming businesses with cutting-edge AI consulting and innovative digital solutions. Your competitive edge starts here.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center">
               <a href="#" className="text-gray-400 hover:text-accent-400 transition-colors duration-300">
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-accent-400 transition-colors duration-300">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-accent-400 transition-colors duration-300">
-                <Github className="h-5 w-5" />
               </a>
             </div>
           </div>

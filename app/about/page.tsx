@@ -41,10 +41,8 @@ export default function About() {
   ]
 
   const achievements = [
-    'AI & Machine Learning Expert',
-    'Full-Stack AI Developer',
-    'iOS App Development Specialist',
-    'Digital Strategy Consultant',
+    'Machine Learning',
+    'iOS Development',
     'Sales & Business Development',
     'Startup Mentor & Advisor'
   ]
@@ -82,48 +80,43 @@ export default function About() {
       {/* Paul O'Donnell Section */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Profile Image Placeholder */}
-            <div className="relative">
-              <div className="aspect-square rounded-3xl glass-effect p-8 flex items-center justify-center relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent-500/20 to-accent-500/20 group-hover:from-accent-500/30 group-hover:to-accent-500/30 transition-all duration-500"></div>
-                <div className="relative z-10 text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-accent-500 to-accent-500 flex items-center justify-center">
-                    <Users className="h-16 w-16 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-display font-bold gradient-text mb-2">Paul O'Donnell</h3>
-                  <p className="text-gray-300">Founder & CEO</p>
-                </div>
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent-400/20 rounded-full blur-xl"></div>
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent-400/20 rounded-full blur-xl"></div>
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Founder Header */}
+            <div className="mb-12">
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-accent-500 to-accent-500 flex items-center justify-center glow-pulse">
+                <Users className="h-16 w-16 text-white" />
               </div>
+              <h3 className="text-3xl font-display font-bold gradient-text mb-2">Paul O'Donnell</h3>
+              <p className="text-xl text-gray-300">Founder & CEO</p>
             </div>
 
             {/* Bio Content */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+                <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">
                   <span className="gradient-text">Shaping Tomorrow's</span> Small Businesses, <span className="gradient-text">Today</span>
                 </h2>
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  Paul O'Donnell is the founder of Vervid, a consulting and development firm that empowers small businesses with world-class AI, app, and web solutions. A relentless problem solver and forward thinker, Paul is passionate about turning complex technology into practical tools that drive growth and competitive advantage.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  With a rare mix of sales savvy and technical insight, Paul doesn't just deliver projects; he delivers outcomes. From building streamlined apps to designing intelligent digital strategies, his focus is always on helping clients scale, innovate, and win in today's fast-moving market.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Driven, adaptable, and laser focused on results, Paul brings an energy and vision that inspires confidence. For him, every project isn't just about solving today's problems; it's about shaping tomorrow's opportunities.
-                </p>
+                <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+                  <p>
+                    Paul O'Donnell is the founder of Vervid, a consulting and development firm that empowers small businesses with world-class AI, app, and web solutions. A relentless problem solver and forward thinker, Paul is passionate about turning complex technology into practical tools that drive growth and competitive advantage.
+                  </p>
+                  <p>
+                    With a rare mix of sales savvy and technical insight, Paul doesn't just deliver projects; he delivers outcomes. From building streamlined apps to designing intelligent digital strategies, his focus is always on helping clients scale, innovate, and win in today's fast-moving market.
+                  </p>
+                  <p>
+                    Driven, adaptable, and laser focused on results, Paul brings an energy and vision that inspires confidence. For him, every project isn't just about solving today's problems; it's about shaping tomorrow's opportunities.
+                  </p>
+                </div>
               </div>
 
               {/* Achievements */}
-              <div>
-                <h3 className="text-2xl font-display font-bold mb-4 text-white">Expertise & Achievements</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="mt-12">
+                <h3 className="text-2xl font-display font-bold mb-8 text-white">Core Expertise</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
                   {achievements.map((achievement, index) => (
-                    <div key={index} className="flex items-center space-x-3">
+                    <div key={index} className="flex items-center justify-center space-x-3 glass-effect p-4 rounded-lg">
                       <CheckCircle className="h-5 w-5 text-accent-400 flex-shrink-0" />
-                      <span className="text-gray-300">{achievement}</span>
+                      <span className="text-gray-300 font-medium">{achievement}</span>
                     </div>
                   ))}
                 </div>
