@@ -31,7 +31,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Generate AI content for this week
-    const aiContent = await generateWeeklyAIRecap()
+    const weekOf = format(new Date(), 'MMMM dd, yyyy')
+    const aiContent = await generateWeeklyAIRecap(weekOf)
     
     const newsletterContent = {
       title: aiContent.title,
@@ -104,7 +105,7 @@ export async function POST(request: NextRequest) {
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #dc2626;">Newsletter Sending Error</h2>
             <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
-            <p><strong>Error:</strong> ${error.message}</p>
+            <p><strong>Error:</strong> ${error instanceof Error ? error.message : 'Unknown error'}</p>
             
             <p style="color: #6b7280; font-size: 14px;">
               The automated newsletter failed to send. Please check the system and try again.

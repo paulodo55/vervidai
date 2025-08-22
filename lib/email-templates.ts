@@ -156,7 +156,7 @@ export function generateNewsletterHTML(content: NewsletterContent, unsubscribeTo
 
 function formatContentForEmail(content: string): string {
   // Convert markdown-style content to HTML
-  return content
+  let formatted = content
     .replace(/^# (.*$)/gim, '<h2>$1</h2>')
     .replace(/^## (.*$)/gim, '<h3>$1</h3>')
     .replace(/^\* (.*$)/gim, '<li>$1</li>')
@@ -164,7 +164,11 @@ function formatContentForEmail(content: string): string {
     .replace(/^(?!<[h|l|p])/gm, '<p>')
     .replace(/(?<!>)$/gm, '</p>')
     .replace(/<p><\/p>/g, '')
-    .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+
+  // Wrap consecutive list items in ul tags
+  formatted = formatted.replace(/(<li>.*?<\/li>(?:\s*<li>.*?<\/li>)*)/g, '<ul>$1</ul>')
+  
+  return formatted
 }
 
 export function generateWelcomeEmail(name: string, unsubscribeToken: string): string {

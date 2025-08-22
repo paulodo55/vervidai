@@ -32,7 +32,8 @@ export async function GET(request: NextRequest) {
 
     // Generate AI content for this week
     console.log('Generating AI content...')
-    const aiContent = await generateWeeklyAIRecap()
+    const weekOf = format(new Date(), 'MMMM dd, yyyy')
+    const aiContent = await generateWeeklyAIRecap(weekOf)
     
     const newsletterContent = {
       title: aiContent.title,
@@ -118,7 +119,7 @@ export async function GET(request: NextRequest) {
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #dc2626;">❌ Weekly Newsletter Sending Failed</h2>
             <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
-            <p><strong>Error:</strong> ${error.message}</p>
+            <p><strong>Error:</strong> ${error instanceof Error ? error.message : 'Unknown error'}</p>
             
             <hr style="margin: 20px 0; border: none; border-top: 1px solid #e5e7eb;">
             
@@ -141,7 +142,7 @@ export async function GET(request: NextRequest) {
       { 
         success: false,
         error: 'Failed to send weekly newsletter',
-        message: error.message,
+        message: error instanceof Error ? error.message : 'Unknown error',
         timestamp: new Date().toISOString()
       },
       { status: 500 }
