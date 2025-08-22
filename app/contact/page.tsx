@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { trackContactForm } from '@/lib/analytics'
 import { 
   Mail, 
   CheckCircle,
@@ -50,6 +51,7 @@ export default function Contact() {
       })
 
       if (response.ok) {
+        trackContactForm('newsletter')
         setIsNewsletterSubmitted(true)
       } else {
         const errorData = await response.json()
@@ -83,6 +85,7 @@ export default function Contact() {
       })
 
       if (response.ok) {
+        trackContactForm('contact')
         setIsQuestionSubmitted(true)
       } else {
         const errorData = await response.json()

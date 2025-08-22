@@ -3,6 +3,7 @@ import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { GoogleAnalytics } from '@/lib/analytics'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -44,6 +45,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body className="min-h-screen">
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
         <div className="particles-bg">
           {Array.from({ length: 50 }).map((_, i) => (
             <div

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useFadeIn, fadeInClasses } from '@/lib/hooks'
+import { trackContactForm } from '@/lib/analytics'
 import { 
   Rocket, 
   Send, 
@@ -100,6 +101,7 @@ export default function GetStarted() {
       })
 
       if (response.ok) {
+        trackContactForm('project')
         setIsSubmitted(true)
       } else {
         const errorData = await response.json()
