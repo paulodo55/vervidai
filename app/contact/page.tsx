@@ -54,7 +54,6 @@ export default function Contact() {
       } else {
         const errorData = await response.json()
         console.error('Newsletter signup failed:', errorData.error)
-        // You might want to show an error message to the user here
         alert('Failed to subscribe to newsletter. Please try again.')
       }
     } catch (error) {

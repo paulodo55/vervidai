@@ -16,6 +16,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://vervidai.com'),
   title: 'Vervid - AI Consulting & Digital Innovation',
   description: 'Transform your business with cutting-edge AI consulting, custom web development, and iOS app solutions. Expert guidance for small companies to gain competitive advantage.',
   keywords: 'AI consulting, machine learning, web development, iOS apps, digital transformation, business automation',
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Vervid - AI Consulting & Digital Innovation',
     description: 'Transform your business with cutting-edge AI consulting and custom digital solutions.',
-    url: 'https://vervid.com',
+    url: 'https://vervidai.com',
     siteName: 'Vervid',
     type: 'website',
   },

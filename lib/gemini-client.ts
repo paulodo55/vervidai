@@ -89,7 +89,7 @@ export async function generateWeeklyAIRecap(weekOf: string): Promise<{
     
     // If JSON parsing fails, provide a fallback response
     if (error instanceof SyntaxError) {
-      console.log('JSON parsing failed, providing fallback response')
+      console.warn('JSON parsing failed, providing fallback response')
       return {
         title: `AI Weekly Recap - Week of ${weekOf}`,
         content: `# AI Weekly Recap - Week of ${weekOf}\n\nThis week brought significant developments in the AI industry. Unfortunately, we encountered a formatting issue with the automated content generation. Please try generating again or contact support.\n\n## Key Highlights\n\n- Major AI developments continue to shape the industry\n- New funding rounds and partnerships announced\n- Regulatory discussions ongoing\n\n*This is a fallback response. Please regenerate for complete content.*`,
