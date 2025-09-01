@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
-import { addSubscriber, getSubscribers } from '@/lib/simple-db'
+import { addSubscriber, getSubscribers, migrateFromEnvToKV } from '@/lib/database'
 import { generateWelcomeEmail } from '@/lib/email-templates'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -31,12 +31,15 @@ export async function POST(request: NextRequest) {
     let htmlContent: string
 
     if (type === 'newsletter') {
+      // Migrate data from env to KV if needed (one-time migration)
+      await migrateFromEnvToKV()
+      
       // Add subscriber to database
-      const added = addSubscriber(email, name)
+      const added = await addSubscriber(email, name)
       
       if (added) {
         // Get the subscriber with the generated token
-        const allSubscribers = getSubscribers()
+        const allSubscribers = await getSubscribers()
         const subscriber = allSubscribers.find(sub => sub.email === email.toLowerCase())
         
         if (subscriber) {

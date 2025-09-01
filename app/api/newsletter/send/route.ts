@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
-import { getActiveSubscribers } from '@/lib/simple-db'
+import { getActiveSubscribers, migrateFromEnvToKV } from '@/lib/database'
 import { generateNewsletterHTML } from '@/lib/email-templates'
 import { generateWeeklyAIRecap } from '@/lib/gemini-client'
 import { format } from 'date-fns'
@@ -11,20 +11,38 @@ export const dynamic = 'force-dynamic'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: NextRequest) {
+  const startTime = Date.now()
+  console.log('🚀 Manual newsletter send initiated...')
+  
   try {
     // Verify admin API key
     const { searchParams } = new URL(request.url)
     const apiKey = searchParams.get('key')
     
-    if (apiKey !== process.env.ADMIN_API_KEY) {
+    if (!process.env.ADMIN_API_KEY) {
+      console.error('❌ ADMIN_API_KEY not configured')
       return NextResponse.json(
-        { error: 'Unauthorized' },
+        { error: 'Server configuration error' },
+        { status: 500 }
+      )
+    }
+    
+    if (apiKey !== process.env.ADMIN_API_KEY) {
+      console.error('❌ Unauthorized manual send attempt')
+      return NextResponse.json(
+        { error: 'Unauthorized - Invalid API key' },
         { status: 401 }
       )
     }
 
-    // Get active subscribers
-    const subscribers = getActiveSubscribers()
+    console.log('✅ Admin API key verified')
+
+    // Migrate data from env to Redis if needed (one-time migration)
+    await migrateFromEnvToKV()
+
+    // Get active subscribers from database
+    console.log('📊 Fetching active subscribers...')
+    const subscribers = await getActiveSubscribers()
     
     if (subscribers.length === 0) {
       return NextResponse.json(

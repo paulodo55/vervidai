@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { unsubscribeByToken } from '@/lib/simple-db'
+import { unsubscribeByToken } from '@/lib/database'
 
 // Force dynamic rendering for this API route
 export const dynamic = 'force-dynamic'
@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.redirect(new URL('/unsubscribe?error=invalid', request.url))
     }
 
-    const success = unsubscribeByToken(token)
+    const success = await unsubscribeByToken(token)
 
     if (success) {
       return NextResponse.redirect(new URL('/unsubscribe?success=true', request.url))
