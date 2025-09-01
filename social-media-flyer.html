@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vervid - Social Media Flyer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #0f172a 50%, #1e293b 100%);
+            color: white;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .social-flyer {
+            width: 1080px;
+            height: 1080px;
+            padding: 60px;
+            background: linear-gradient(135deg, #000000 0%, #0f172a 50%, #1e293b 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Background Effects */
+        .bg-effect {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(99, 102, 241, 0.2);
+            filter: blur(60px);
+            animation: glow-pulse 4s ease-in-out infinite;
+        }
+
+        .bg-effect-1 {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            right: -100px;
+        }
+
+        .bg-effect-2 {
+            width: 250px;
+            height: 250px;
+            bottom: 150px;
+            left: -80px;
+            animation-delay: 1.5s;
+        }
+
+        .bg-effect-3 {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            right: 30%;
+            animation-delay: 3s;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { 
+                opacity: 0.4;
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
+        }
+
+        .font-display {
+            font-family: 'Poppins', system-ui, sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #818cf8 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            letter-spacing: -2px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #818cf8;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        /* Main Content */
+        .main-content {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .main-headline {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #cbd5e1;
+            font-weight: 500;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Key Benefits */
+        .key-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .benefit-stat {
+            text-align: center;
+        }
+
+        .benefit-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: #818cf8;
+            margin-bottom: 8px;
+        }
+
+        .benefit-label {
+            font-size: 16px;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        /* CTA */
+        .cta-section {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            border-radius: 16px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.5);
+        }
+
+        .guarantee-text {
+            font-size: 18px;
+            color: #22c55e;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .urgency-text {
+            font-size: 16px;
+            color: #818cf8;
+            font-weight: 500;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .website {
+            font-size: 28px;
+            color: #818cf8;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .email {
+            font-size: 20px;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .social-flyer {
+                width: 100vw;
+                height: 100vh;
+                padding: 40px;
+            }
+            
+            .main-headline {
+                font-size: 48px;
+            }
+            
+            .key-benefits {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="social-flyer">
+        <!-- Background Effects -->
+        <div class="bg-effect bg-effect-1"></div>
+        <div class="bg-effect bg-effect-2"></div>
+        <div class="bg-effect bg-effect-3"></div>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="logo font-display gradient-text">VERVID</div>
+            <div class="tagline">AI • Web • iOS • Strategy</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 class="main-headline font-display">
+                Stop Losing to<br>
+                <span class="gradient-text">AI-Powered</span><br>
+                Competitors
+            </h1>
+            
+            <p class="subtitle">
+                Custom AI automation that increases revenue by 40%+ 
+                and saves 20+ hours weekly
+            </p>
+
+            <!-- Key Benefits -->
+            <div class="key-benefits">
+                <div class="benefit-stat">
+                    <div class="benefit-number">40%+</div>
+                    <div class="benefit-label">Revenue Growth</div>
+                </div>
+                <div class="benefit-stat">
+                    <div class="benefit-number">20+</div>
+                    <div class="benefit-label">Hours Saved</div>
+                </div>
+                <div class="benefit-stat">
+                    <div class="benefit-number">90</div>
+                    <div class="benefit-label">Days to ROI</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <div class="cta-button">Get Your Free AI Audit</div>
+            <div class="guarantee-text">✓ 90-Day ROI Guarantee</div>
+            <div class="urgency-text">Every day you wait is another day competitors gain ground</div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <div class="website">vervidai.com</div>
+            <div class="email">hello@vervidai.com</div>
+        </div>
+    </div>
+</body>
+</html>

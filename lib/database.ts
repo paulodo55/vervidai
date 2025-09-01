@@ -1,7 +1,8 @@
 // Permanent database solution using Redis
 // Optimized for Vercel serverless environment with connection pooling and error handling
 
-import { createClient, RedisClientType } from 'redis'
+import { createClient } from 'redis'
+import type { RedisClientType } from 'redis'
 
 export interface Subscriber {
   email: string
@@ -16,7 +17,7 @@ let redis: RedisClientType | null = null
 let isConnecting = false
 
 async function getRedisClient(): Promise<RedisClientType> {
-  if (redis && redis.isOpen) {
+  if (redis && redis.isReady) {
     return redis
   }
 
@@ -25,7 +26,7 @@ async function getRedisClient(): Promise<RedisClientType> {
     while (isConnecting) {
       await new Promise(resolve => setTimeout(resolve, 100))
     }
-    if (redis && redis.isOpen) {
+    if (redis && redis.isReady) {
       return redis
     }
   }
@@ -42,9 +43,7 @@ async function getRedisClient(): Promise<RedisClientType> {
       url: redisUrl,
       socket: {
         connectTimeout: 10000,
-        lazyConnect: true,
       },
-      retry_delay: 1000,
     })
 
     redis.on('error', (error) => {
