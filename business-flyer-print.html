@@ -108,7 +108,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             position: relative;
             z-index: 10;
         }
@@ -155,10 +155,9 @@
 
         /* Services */
         .services {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             position: relative;
             z-index: 10;
-            flex-grow: 1;
         }
 
         .services-header {
@@ -203,11 +202,11 @@
         /* CTA Section */
         .cta {
             text-align: center;
-            padding: 10px;
+            padding: 12px;
             background: #8b5cf6;
             color: white;
             border-radius: 4px;
-            margin-bottom: 8px;
+            margin-bottom: 15px;
             position: relative;
             z-index: 10;
         }
@@ -238,26 +237,25 @@
 
         /* Contact Info */
         .contact {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px;
+            text-align: center;
+            padding: 12px;
             background: #ffffff;
             border: 2px solid #8b5cf6;
             border-radius: 4px;
             position: relative;
             z-index: 10;
-            margin-top: auto;
         }
 
-        .contact-left {
+        .contact-content {
             display: flex;
-            flex-direction: column;
-            gap: 2px;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .contact-item {
-            font-size: 10px;
+            font-size: 11px;
             color: #000000;
             font-weight: 600;
         }
@@ -268,26 +266,10 @@
         }
 
         .contact-name {
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 900;
             color: #000000;
-            margin-bottom: 2px;
-        }
-
-        .qr-placeholder {
-            width: 50px;
-            height: 50px;
-            background: #f8fafc;
-            border: 1px dashed #8b5cf6;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 7px;
-            color: #8b5cf6;
-            text-align: center;
-            line-height: 1.1;
-            font-weight: 600;
+            margin-bottom: 8px;
         }
 
         /* Print optimizations */
@@ -390,8 +372,8 @@
 
         <!-- Contact -->
         <div class="contact">
-            <div class="contact-left">
-                <div class="contact-name">Paul O'Donnell</div>
+            <div class="contact-name">Paul O'Donnell</div>
+            <div class="contact-content">
                 <div class="contact-item">
                     Email: <span class="contact-highlight">hello@vervidai.com</span>
                 </div>
@@ -401,11 +383,6 @@
                 <div class="contact-item">
                     Web: <span class="contact-highlight">vervidai.com</span>
                 </div>
-            </div>
-            <div class="qr-placeholder">
-                QR Code<br>
-                Scan to<br>
-                Contact
             </div>
         </div>
     </div>
