@@ -29,10 +29,12 @@
         .flyer {
             width: 8.5in;
             height: 11in;
-            padding: 0.4in;
+            padding: 0.3in;
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Background Pattern */
@@ -64,24 +66,24 @@
         /* Header */
         .header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             position: relative;
             z-index: 10;
-            padding: 15px;
+            padding: 12px;
             background: #ffffff;
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
         }
 
         .logo {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 900;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             letter-spacing: -1px;
         }
 
         .tagline {
-            font-size: 14px;
+            font-size: 12px;
             color: #8b5cf6;
             font-weight: 600;
             text-transform: uppercase;
@@ -91,22 +93,22 @@
         /* Main Headline */
         .main-headline {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             position: relative;
             z-index: 10;
         }
 
         .main-headline h1 {
-            font-size: 44px;
+            font-size: 36px;
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             letter-spacing: -1px;
             color: #1e293b;
         }
 
         .main-headline .subtitle {
-            font-size: 18px;
+            font-size: 16px;
             color: #475569;
             font-weight: 500;
             max-width: 500px;
@@ -117,14 +119,14 @@
         .benefits {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin-bottom: 15px;
             position: relative;
             z-index: 10;
         }
 
         .benefit-card {
-            padding: 15px;
+            padding: 12px;
             background: #ffffff;
             border: 2px solid #e2e8f0;
             border-radius: 12px;
@@ -166,31 +168,32 @@
 
         /* Services */
         .services {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             position: relative;
             z-index: 10;
+            flex-grow: 1;
         }
 
         .services-header {
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .services-header h2 {
-            font-size: 26px;
+            font-size: 22px;
             font-weight: 800;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: #1e293b;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
         }
 
         .service-item {
-            padding: 16px;
+            padding: 12px;
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 10px;
@@ -199,14 +202,14 @@
         }
 
         .service-title {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 700;
             color: #1e293b;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .service-desc {
-            font-size: 11px;
+            font-size: 10px;
             color: #64748b;
             line-height: 1.3;
         }
@@ -214,37 +217,37 @@
         /* CTA Section */
         .cta {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
             color: white;
             border-radius: 16px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             position: relative;
             z-index: 10;
         }
 
         .cta h2 {
-            font-size: 26px;
+            font-size: 22px;
             font-weight: 900;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .cta-desc {
-            font-size: 14px;
-            margin-bottom: 15px;
+            font-size: 12px;
+            margin-bottom: 10px;
             opacity: 0.9;
         }
 
         .guarantee {
             display: inline-block;
-            padding: 8px 16px;
+            padding: 6px 12px;
             background: rgba(34, 197, 94, 0.2);
             border: 1px solid rgba(34, 197, 94, 0.5);
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 10px;
             color: #ffffff;
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 8px;
         }
 
         /* Contact Info */
@@ -252,22 +255,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px;
+            padding: 12px;
             background: #ffffff;
             border: 2px solid #8b5cf6;
             border-radius: 12px;
             position: relative;
             z-index: 10;
+            margin-top: auto;
         }
 
         .contact-left {
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 4px;
         }
 
         .contact-item {
-            font-size: 13px;
+            font-size: 11px;
             color: #475569;
             font-weight: 600;
         }
@@ -277,16 +281,23 @@
             font-weight: 900;
         }
 
+        .contact-name {
+            font-size: 14px;
+            font-weight: 900;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+
         .qr-placeholder {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             background: #f8fafc;
             border: 2px dashed #8b5cf6;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 9px;
+            font-size: 8px;
             color: #8b5cf6;
             text-align: center;
             line-height: 1.2;
@@ -356,28 +367,28 @@
             </div>
             <div class="services-grid">
                 <div class="service-item">
-                    <div class="service-title">🤖 Process Automation</div>
-                    <div class="service-desc">Eliminate manual work, automate customer service, optimize workflows</div>
+                    <div class="service-title">🤖 AI Automation</div>
+                    <div class="service-desc">Eliminate manual work & optimize workflows</div>
                 </div>
                 <div class="service-item">
                     <div class="service-title">📊 Predictive Analytics</div>
-                    <div class="service-desc">Sales forecasting, inventory optimization, customer behavior prediction</div>
+                    <div class="service-desc">Sales forecasting & customer insights</div>
                 </div>
                 <div class="service-item">
-                    <div class="service-title">🌐 High-Performance Websites</div>
-                    <div class="service-desc">Lightning-fast, mobile-first sites that convert visitors to customers</div>
+                    <div class="service-title">🌐 Web Development</div>
+                    <div class="service-desc">High-converting, lightning-fast websites</div>
                 </div>
                 <div class="service-item">
-                    <div class="service-title">📱 iOS App Development</div>
-                    <div class="service-desc">Native apps that deliver exceptional user experiences and results</div>
+                    <div class="service-title">📱 iOS Apps</div>
+                    <div class="service-desc">Native apps that drive results</div>
                 </div>
                 <div class="service-item">
-                    <div class="service-title">🎯 Custom AI Strategy</div>
-                    <div class="service-desc">Tailored AI roadmap, implementation planning, success measurement</div>
+                    <div class="service-title">🎯 AI Strategy</div>
+                    <div class="service-desc">Custom roadmaps & implementation</div>
                 </div>
                 <div class="service-item">
-                    <div class="service-title">🔍 Competitive Intelligence</div>
-                    <div class="service-desc">AI-powered market insights, competitor monitoring, trend prediction</div>
+                    <div class="service-title">🔍 Market Intelligence</div>
+                    <div class="service-desc">Competitor monitoring & trends</div>
                 </div>
             </div>
         </div>
@@ -387,7 +398,7 @@
             <h2 class="font-display">Get Your Free AI Audit</h2>
             <p class="cta-desc">30-minute strategy session • Custom AI roadmap • ROI projections</p>
             <div class="guarantee">✓ 90-Day ROI Guarantee</div>
-            <div style="font-size: 14px; font-weight: 600; opacity: 0.9;">
+            <div style="font-size: 12px; font-weight: 600; opacity: 0.9;">
                 Every day you wait is another day competitors gain ground
             </div>
         </div>
@@ -395,14 +406,15 @@
         <!-- Contact -->
         <div class="contact">
             <div class="contact-left">
+                <div class="contact-name">Paul O'Donnell</div>
                 <div class="contact-item">
                     📧 <span class="contact-highlight">hello@vervidai.com</span>
                 </div>
                 <div class="contact-item">
-                    🌐 <span class="contact-highlight">vervidai.com</span>
+                    📱 <span class="contact-highlight">(512) 264-5260</span>
                 </div>
                 <div class="contact-item">
-                    📱 <span class="contact-highlight">Get started today - Free consultation</span>
+                    🌐 <span class="contact-highlight">vervidai.com</span>
                 </div>
             </div>
             <div class="qr-placeholder">
