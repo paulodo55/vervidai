@@ -70,7 +70,7 @@ export default function About() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              At Vervid, we're committed to efficiency—leveraging cutting-edge technology to bridge gaps, 
+              At Vervid, we're committed to efficiency - leveraging cutting-edge technology to bridge gaps, 
               streamline operations, and deliver solutions that keep pace with the latest advancements.
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function About() {
                   </p>
                   <p>
                     With a deep understanding of both technology and business needs, Paul leads Vervid's mission to stay at the forefront of technological advancement. 
-                    He believes that efficiency is the key to success, and every product Vervid develops reflects this core principle—from streamlined CRM systems to specialized industry solutions.
+                    He believes that efficiency is the key to success, and every product Vervid develops reflects this core principle - from streamlined CRM systems to specialized industry solutions.
                   </p>
                   <p>
                     Under Paul's leadership, Vervid has become synonymous with innovation and reliability. His commitment to continuous learning and adaptation ensures that 

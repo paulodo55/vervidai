@@ -72,7 +72,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              At Vervid, we're all about efficiency—using cutting-edge technology to bridge gaps and deliver solutions 
+              At Vervid, we're all about efficiency - using cutting-edge technology to bridge gaps and deliver solutions 
               that keep pace with the latest advancements to serve our customers better.
             </p>
             
