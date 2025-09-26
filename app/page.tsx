@@ -17,34 +17,31 @@ import {
 export default function Home() {
   const isVisible = useFadeIn()
 
-  const services = [
+  const products = [
     {
       icon: Brain,
-      title: 'AI Consulting',
-      description: 'Transform your business with intelligent automation and machine learning solutions tailored to your industry.',
-      features: ['Custom AI Strategy', 'Process Automation', 'Predictive Analytics', 'ROI Optimization'],
-      href: '/services/ai-consulting'
+      title: 'VervidFlow',
+      description: 'A top-of-the-line CRM system that streamlines your customer relationships and drives business growth with intelligent automation.',
+      features: ['Advanced CRM Features', 'Sales Pipeline Management', 'Customer Analytics', 'Automated Workflows'],
+      href: 'https://vervidflow.com',
+      status: 'available',
+      external: true
     },
     {
       icon: Globe,
-      title: 'Web Development',
-      description: 'High-performance, responsive websites that captivate your audience and drive conversions.',
-      features: ['Modern Frameworks', 'SEO Optimized', 'Lightning Fast', 'Mobile-First Design'],
-      href: '/services/web-development'
+      title: 'VervidAG',
+      description: 'Revolutionary agricultural technology platform designed specifically for farmers to optimize crop management and increase yields.',
+      features: ['Crop Management', 'Yield Optimization', 'Weather Integration', 'Farm Analytics'],
+      href: '#',
+      status: 'coming-soon'
     },
     {
       icon: Smartphone,
-      title: 'iOS App Development',
-      description: 'Native iOS applications that deliver exceptional user experiences and business results.',
-      features: ['Native Performance', 'App Store Ready', 'User-Centric Design', 'Ongoing Support'],
-      href: '/services/ios-development'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Digital Strategy',
-      description: 'Comprehensive digital transformation strategies that give you the competitive edge.',
-      features: ['Market Analysis', 'Growth Planning', 'Tech Stack Selection', 'Implementation Roadmap'],
-      href: '/services/digital-strategy'
+      title: 'VervidHire',
+      description: 'Intelligent job-finding platform that connects students with their ideal career opportunities using advanced matching algorithms.',
+      features: ['Smart Job Matching', 'Student-Focused', 'Career Guidance', 'Application Tracking'],
+      href: '#',
+      status: 'coming-soon'
     }
   ]
 
@@ -65,27 +62,27 @@ export default function Home() {
           <div className={`text-center ${fadeInClasses(isVisible)}`}>
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-8">
               <Sparkles className="h-4 w-4 text-accent-400 mr-2" />
-              <span className="text-sm font-medium">Transforming Businesses with AI</span>
+              <span className="text-sm font-medium">Bridging Technology & Efficiency</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 leading-tight">
-              <span className="gradient-text">Unleash</span> Your
+              <span className="gradient-text">Efficiency</span> Through
               <br />
-              <span className="gradient-text">Digital Potential</span>
+              <span className="gradient-text">Innovation</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              We specialize in AI consulting, cutting-edge web development, and iOS apps that give small businesses 
-              the competitive edge they need to dominate their markets.
+              At Vervid, we're all about efficiency—using cutting-edge technology to bridge gaps and deliver solutions 
+              that keep pace with the latest advancements to serve our customers better.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
               <Link href="/contact" className="btn-primary group">
-                Start Your Transformation
+                Explore Our Products
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
               <Link href="/about" className="btn-secondary">
-                Discover Our Story
+                Learn About Vervid
               </Link>
             </div>
 
@@ -104,61 +101,105 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="section-padding relative">
+      {/* Products Section */}
+      <section id="products" className="section-padding relative">
         <div className="container-custom">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-6">
               <Rocket className="h-4 w-4 text-accent-400 mr-2" />
-              <span className="text-sm font-medium">Our Expertise</span>
+              <span className="text-sm font-medium">Our Products</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              Services That <span className="gradient-text">Deliver Results</span>
+              Solutions That <span className="gradient-text">Drive Efficiency</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From AI-powered automation to stunning digital experiences, we provide comprehensive solutions 
-              that transform your business and accelerate growth.
+              We develop cutting-edge software products that streamline operations, enhance productivity, 
+              and keep businesses ahead of the technological curve.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <Link 
-                key={index}
-                href={service.href}
-                className="glass-effect p-8 rounded-2xl card-hover group relative overflow-hidden block"
-              >
-                {/* Enhanced background effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-accent-500/5 to-white/5 group-hover:from-accent-500/10 group-hover:to-white/10 transition-all duration-500"></div>
-                <div className="relative z-10">
-                  <div className="flex items-start space-x-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-accent-500 to-accent-600 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 glow-effect">
-                        <service.icon className="h-8 w-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product, index) => (
+              product.status === 'available' ? (
+                <a
+                  key={index}
+                  href={product.href}
+                  target={product.external ? "_blank" : "_self"}
+                  rel={product.external ? "noopener noreferrer" : undefined}
+                  className="glass-effect p-8 rounded-2xl card-hover group relative overflow-hidden block"
+                >
+                  {/* Enhanced background effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-500/5 to-white/5 group-hover:from-accent-500/10 group-hover:to-white/10 transition-all duration-500"></div>
+                  <div className="relative z-10">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="flex-shrink-0 mb-6">
+                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-accent-500 to-accent-600 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 glow-effect">
+                          <product.icon className="h-8 w-8 text-white" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:gradient-text transition-all duration-300">
+                          {product.title}
+                        </h3>
+                        <p className="text-gray-300 mb-6 leading-relaxed">
+                          {product.description}
+                        </p>
+                        <ul className="space-y-2 mb-6">
+                          {product.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center justify-center text-gray-400">
+                              <div className="w-2 h-2 bg-accent-400 rounded-full mr-3"></div>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="flex items-center justify-center text-accent-400 font-semibold">
+                          Visit VervidFlow <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                        </div>
                       </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:gradient-text transition-all duration-300">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-300 mb-6 leading-relaxed">
-                        {service.description}
-                      </p>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-gray-400">
-                            <div className="w-2 h-2 bg-accent-400 rounded-full mr-3"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                      <div className="mt-6 flex items-center text-accent-400 font-semibold">
-                        Learn More <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </a>
+              ) : (
+                <div
+                  key={index}
+                  className="glass-effect p-8 rounded-2xl relative overflow-hidden block opacity-75 cursor-not-allowed"
+                >
+                  {/* Coming Soon Badge */}
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-accent-500 to-accent-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    COMING SOON
+                  </div>
+                  {/* Enhanced background effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-500/5 to-white/5"></div>
+                  <div className="relative z-10">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="flex-shrink-0 mb-6">
+                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-gray-600 to-gray-700 flex items-center justify-center">
+                          <product.icon className="h-8 w-8 text-gray-400" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-display font-bold text-gray-400 mb-4">
+                          {product.title}
+                        </h3>
+                        <p className="text-gray-500 mb-6 leading-relaxed">
+                          {product.description}
+                        </p>
+                        <ul className="space-y-2 mb-6">
+                          {product.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center justify-center text-gray-500">
+                              <div className="w-2 h-2 bg-gray-500 rounded-full mr-3"></div>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="flex items-center justify-center text-gray-500 font-semibold">
+                          Coming Soon
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </Link>
+              )
             ))}
           </div>
         </div>
@@ -178,19 +219,19 @@ export default function Home() {
               <span className="text-sm font-medium">Ready to Transform?</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              Let's Build Something <span className="gradient-text">Amazing</span>
+              Ready to <span className="gradient-text">Optimize</span> Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the ranks of successful businesses that have transformed their operations with our AI-powered solutions. 
-              Your competitive advantage starts with a single conversation.
+              Discover how Vervid's innovative technology solutions can streamline your operations, boost efficiency, 
+              and keep you ahead of the competition. Let's bridge the gap between where you are and where you want to be.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/contact" className="btn-primary group text-lg px-10 py-4">
-                Start Your Project Today
+                Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
               <Link href="/about" className="btn-secondary text-lg px-10 py-4">
-                Meet the Founder
+                Learn About Vervid
               </Link>
             </div>
           </div>

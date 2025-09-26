@@ -20,23 +20,23 @@ export default function About() {
   const values = [
     {
       icon: Brain,
-      title: 'Innovation First',
-      description: 'We stay at the forefront of AI and technology to deliver cutting-edge solutions that give you a competitive advantage.'
+      title: 'Efficiency Through Innovation',
+      description: 'We harness the latest technological advancements to create solutions that eliminate inefficiencies and streamline operations across all business sectors.'
     },
     {
       icon: Users,
-      title: 'Client-Centric',
-      description: 'Your success is our success. We build long-term partnerships based on trust, transparency, and exceptional results.'
+      title: 'Bridging Technology Gaps',
+      description: 'Our mission is to bridge the gap between complex technology and practical business applications, making advanced solutions accessible to everyone.'
     },
     {
       icon: TrendingUp,
-      title: 'Growth Focused',
-      description: 'Every solution we create is designed to scale with your business and drive measurable growth and ROI.'
+      title: 'Continuous Advancement',
+      description: 'We stay current with emerging technologies and industry trends, ensuring our products evolve to meet tomorrow\'s challenges today.'
     },
     {
       icon: Award,
-      title: 'Excellence Delivered',
-      description: 'We maintain the highest standards in everything we do, from code quality to customer service.'
+      title: 'Customer-First Innovation',
+      description: 'Every product we develop is designed with our customers in mind, focusing on usability, reliability, and measurable business impact.'
     }
   ]
 
@@ -60,18 +60,18 @@ export default function About() {
           <div className={`text-center ${fadeInClasses(isVisible)}`}>
             <div className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-8">
               <Sparkles className="h-4 w-4 text-accent-400 mr-2" />
-              <span className="text-sm font-medium">Our Story</span>
+              <span className="text-sm font-medium">About Vervid</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
-              Meet the <span className="gradient-text">Visionary</span>
+              Pioneering <span className="gradient-text">Efficiency</span>
               <br />
-              Behind <span className="gradient-text">Vervid</span>
+              Through <span className="gradient-text">Technology</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Driven by passion, powered by innovation, and dedicated to transforming businesses 
-              through the intelligent application of AI and cutting-edge technology.
+              At Vervid, we're committed to efficiency—leveraging cutting-edge technology to bridge gaps, 
+              streamline operations, and deliver solutions that keep pace with the latest advancements.
             </p>
           </div>
         </div>
@@ -91,17 +91,20 @@ export default function About() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">
-                  <span className="gradient-text">Shaping Tomorrow's</span> Small Businesses, <span className="gradient-text">Today</span>
+                  <span className="gradient-text">Leading the Future</span> of Business <span className="gradient-text">Efficiency</span>
                 </h2>
                 <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
                   <p>
-                    Paul O'Donnell is the founder of Vervid, a consulting and development firm that empowers small businesses with world-class AI, app, and web solutions. A relentless problem solver and forward thinker, Paul is passionate about turning complex technology into practical tools that drive growth and competitive advantage.
+                    Paul O'Donnell is the founder and visionary behind Vervid, a technology company dedicated to creating efficient, innovative software solutions. 
+                    Paul's passion lies in harnessing the power of modern technology to solve real-world problems and bridge the gap between complex systems and practical business applications.
                   </p>
                   <p>
-                    With a rare mix of sales savvy and technical insight, Paul doesn't just deliver projects; he delivers outcomes. From building streamlined apps to designing intelligent digital strategies, his focus is always on helping clients scale, innovate, and win in today's fast-moving market.
+                    With a deep understanding of both technology and business needs, Paul leads Vervid's mission to stay at the forefront of technological advancement. 
+                    He believes that efficiency is the key to success, and every product Vervid develops reflects this core principle—from streamlined CRM systems to specialized industry solutions.
                   </p>
                   <p>
-                    Driven, adaptable, and laser focused on results, Paul brings an energy and vision that inspires confidence. For him, every project isn't just about solving today's problems; it's about shaping tomorrow's opportunities.
+                    Under Paul's leadership, Vervid has become synonymous with innovation and reliability. His commitment to continuous learning and adaptation ensures that 
+                    Vervid's products not only meet today's needs but anticipate tomorrow's challenges, keeping customers ahead of the technological curve.
                   </p>
                 </div>
               </div>
@@ -135,8 +138,8 @@ export default function About() {
               Building the <span className="gradient-text">Future</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Vervid represents the next generation of AI consulting - where cutting-edge technology 
-              meets personalized service to create transformative business solutions.
+              Vervid represents the next generation of business technology - where efficiency meets innovation 
+              to create solutions that adapt to the ever-evolving technological landscape.
             </p>
             
             {/* Enhanced Visual Elements */}

@@ -18,7 +18,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 leading-relaxed">
-              Transforming businesses with cutting-edge AI consulting and innovative digital solutions. Your competitive edge starts here.
+              Driving efficiency through innovative technology solutions. We bridge the gap between complex systems and practical business applications.
             </p>
             <div className="flex justify-center">
               <a href="#" className="text-gray-400 hover:text-accent-400 transition-colors duration-300">
@@ -27,14 +27,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Products */}
           <div className="space-y-4">
-            <h3 className="text-lg font-display font-semibold text-white">Services</h3>
+            <h3 className="text-lg font-display font-semibold text-white">Products</h3>
             <ul className="space-y-2">
-              <li><Link href="/services/ai-consulting" className="text-gray-400 hover:text-white transition-colors duration-300">AI Consulting</Link></li>
-              <li><Link href="/services/web-development" className="text-gray-400 hover:text-white transition-colors duration-300">Web Development</Link></li>
-              <li><Link href="/services/ios-development" className="text-gray-400 hover:text-white transition-colors duration-300">iOS App Development</Link></li>
-              <li><Link href="/services/digital-strategy" className="text-gray-400 hover:text-white transition-colors duration-300">Digital Strategy</Link></li>
+              <li><a href="https://vervidflow.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300">VervidFlow</a></li>
+              <li><span className="text-gray-500 cursor-not-allowed">VervidAG (Coming Soon)</span></li>
+              <li><span className="text-gray-500 cursor-not-allowed">VervidHire (Coming Soon)</span></li>
             </ul>
           </div>
 
