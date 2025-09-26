@@ -37,8 +37,7 @@ export default function Products() {
       features: ['Crop Management', 'Yield Optimization', 'Weather Integration', 'Farm Analytics', 'Resource Planning', 'Sustainability Metrics'],
       href: '#',
       status: 'coming-soon',
-      category: 'Agriculture Technology',
-      launchDate: 'Q2 2025'
+      category: 'Agriculture Technology'
     },
     {
       icon: Smartphone,
@@ -48,8 +47,7 @@ export default function Products() {
       features: ['Smart Job Matching', 'Student-Focused', 'Career Guidance', 'Application Tracking', 'Interview Prep', 'Employer Network'],
       href: '#',
       status: 'coming-soon',
-      category: 'Career Technology',
-      launchDate: 'Q3 2025'
+      category: 'Career Technology'
     }
   ]
 
@@ -145,15 +143,6 @@ export default function Products() {
                           {product.longDescription}
                         </p>
 
-                        {/* Launch Date for Coming Soon */}
-                        {product.status === 'coming-soon' && product.launchDate && (
-                          <div className="mb-6">
-                            <div className="inline-flex items-center px-4 py-2 rounded-lg bg-accent-500/10 border border-accent-500/20">
-                              <Target className="h-4 w-4 text-accent-400 mr-2" />
-                              <span className="text-accent-300 font-medium">Expected Launch: {product.launchDate}</span>
-                            </div>
-                          </div>
-                        )}
 
                         {/* CTA Button */}
                         {product.status === 'available' ? (
@@ -234,3 +223,4 @@ export default function Products() {
     </div>
   )
 }
+
